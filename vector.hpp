@@ -69,7 +69,7 @@ namespace Common {
          * 
          * @param other The Vector3 object from which to initialize the Vector2 object.
          */
-        constexpr Vector2(Vector3 other) noexcept : Vector2(other.GetX(), other.GetY()) {}
+        constexpr Vector2(Vector3 other) noexcept;
 
         /**
          * @brief Retrieves the X coordinate value.
@@ -732,7 +732,7 @@ namespace Common {
          * 
          * @param other The Vector2 object from which to initialize the Vector3 object.
          */
-        constexpr Vector3(Vector2 other) noexcept : Vector3(other.GetX(), other.GetY(), 0) {}
+        constexpr Vector3(Vector2 other) noexcept;
 
         /**
          * @brief Retrieves the X coordinate value.
@@ -1381,4 +1381,7 @@ namespace Common {
 
     constexpr Vector3 Vector3::zero{0, 0, 0};
     constexpr Vector3 Vector3::one {1, 1, 1};
+
+    constexpr Vector2::Vector2(Vector3 other) noexcept : Vector2(other.GetX(), other.GetY()) {}
+    constexpr Vector3::Vector3(Vector2 other) noexcept : Vector3(other.GetX(), other.GetY(), 0) {}
 }
