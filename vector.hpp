@@ -8,9 +8,6 @@ namespace Common {
         using value_type = float;
     };
 
-    constexpr Vector2 Vector2::zero{0, 0};
-    constexpr Vector2 Vector2::one {1, 1};
-
     /**
      * @class Vector2
      * @brief A class representing a 2-dimensional vector.
@@ -659,15 +656,15 @@ namespace Common {
          * @param other The vector to compare.
          * @return -1 if this vector is less than the other vector, 1 if greater, 0 if equal.
          */
-        constexpr bool operator<=>(const Vector2& other) const noexcept {
-            if (operator<(other)) return -1;
-            if (operator>(other)) return 1;
-            return 0;
+        constexpr std::strong_ordering operator<=>(const Vector3& other) const noexcept {
+            if (operator<(other)) return std::strong_ordering::less;
+            if (operator>(other)) return std::strong_ordering::greater;
+            return std::strong_ordering::equal;
         }
     };
 
-    constexpr Vector3 Vector3::zero{0, 0, 0};
-    constexpr Vector3 Vector3::one {1, 1, 1};
+    constexpr Vector2 Vector2::zero{0, 0};
+    constexpr Vector2 Vector2::one {1, 1};
 
     /**
      * @class Vector3
@@ -1375,10 +1372,13 @@ namespace Common {
          * @param other The vector to compare.
          * @return -1 if this vector is less than the other vector, 1 if greater, 0 if equal.
          */
-        constexpr bool operator<=>(const Vector3& other) const noexcept {
-            if (operator<(other)) return -1;
-            if (operator>(other)) return 1;
-            return 0;
+        constexpr std::strong_ordering operator<=>(const Vector3& other) const noexcept {
+            if (operator<(other)) return std::strong_ordering::less;
+            if (operator>(other)) return std::strong_ordering::greater;
+            return std::strong_ordering::equal;
         }
     };
+
+    constexpr Vector3 Vector3::zero{0, 0, 0};
+    constexpr Vector3 Vector3::one {1, 1, 1};
 }
