@@ -4,6 +4,9 @@
 #include <algorithm>
 
 namespace Common {
+    struct IVector {
+        using value_type = float;
+    };
     template <typename Value>
     concept arithmetic = std::integral<Value> || std::floating_point<Value>;
 
@@ -16,10 +19,10 @@ namespace Common {
      * 
      * @tparam value_type The type of the vector components.
      */     
-    template <arithmetic Value = float>
+    //template <arithmetic Value = float>
     class Vector2 {
     public:
-        using value_type = Value;
+        using value_type = IVector::value_type;
     protected:
         /**
          * @brief A member variable of type value_type representing the x-coordinate.
