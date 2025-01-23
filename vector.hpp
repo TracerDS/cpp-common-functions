@@ -69,7 +69,7 @@ namespace Common {
          * 
          * @param other The Vector3 object from which to initialize the Vector2 object.
          */
-        constexpr Vector2(Vector3 other) noexcept : Vector2(other.GetX(), other.GetY()) {}
+        constexpr Vector2(Vector3 other) noexcept;
 
         /**
          * @brief Retrieves the X coordinate value.
@@ -656,15 +656,15 @@ namespace Common {
          * @param other The vector to compare.
          * @return -1 if this vector is less than the other vector, 1 if greater, 0 if equal.
          */
-        constexpr bool operator<=>(const Vector2& other) const noexcept {
-            if (operator<(other)) return -1;
-            if (operator>(other)) return 1;
-            return 0;
+        constexpr std::strong_ordering operator<=>(const Vector3& other) const noexcept {
+            if (operator<(other)) return std::strong_ordering::less;
+            if (operator>(other)) return std::strong_ordering::greater;
+            return std::strong_ordering::equal;
         }
     };
 
-    constexpr Vector2<float> Vector2<float>::zero{0, 0};
-    constexpr Vector2<float> Vector2<float>::one {1, 1};
+    constexpr Vector3 Vector3::zero{0, 0, 0};
+    constexpr Vector3 Vector3::one {1, 1, 1};
 
     /**
      * @class Vector3
@@ -732,7 +732,7 @@ namespace Common {
          * 
          * @param other The Vector2 object from which to initialize the Vector3 object.
          */
-        constexpr Vector3(Vector2 other) noexcept : Vector3(other.GetX(), other.GetY(), 0) {}
+        constexpr Vector3(Vector2 other) noexcept;
 
         /**
          * @brief Retrieves the X coordinate value.
@@ -1372,13 +1372,10 @@ namespace Common {
          * @param other The vector to compare.
          * @return -1 if this vector is less than the other vector, 1 if greater, 0 if equal.
          */
-        constexpr bool operator<=>(const Vector3& other) const noexcept {
-            if (operator<(other)) return -1;
-            if (operator>(other)) return 1;
-            return 0;
+        constexpr std::strong_ordering operator<=>(const Vector3& other) const noexcept {
+            if (operator<(other)) return std::strong_ordering::less;
+            if (operator>(other)) return std::strong_ordering::greater;
+            return std::strong_ordering::equal;
         }
     };
-
-    constexpr Vector3 Vector3::zero{0, 0, 0};
-    constexpr Vector3 Vector3::one {1, 1, 1};
 }
