@@ -4,12 +4,8 @@
 #include <algorithm>
 
 namespace Common {
-    struct IVector {
-        using value_type = float;
-    };
-
-    constexpr Vector2 Vector2::zero{0, 0};
-    constexpr Vector2 Vector2::one {1, 1};
+    template <typename Value>
+    concept arithmetic = std::integral<Value> || std::floating_point<Value>;
 
     /**
      * @class Vector2
@@ -20,9 +16,10 @@ namespace Common {
      * 
      * @tparam value_type The type of the vector components.
      */     
+    template <arithmetic Value = float>
     class Vector2 {
     public:
-        using value_type = IVector::value_type;
+        using value_type = Value;
     protected:
         /**
          * @brief A member variable of type value_type representing the x-coordinate.
@@ -666,8 +663,8 @@ namespace Common {
         }
     };
 
-    constexpr Vector3 Vector3::zero{0, 0, 0};
-    constexpr Vector3 Vector3::one {1, 1, 1};
+    constexpr Vector2<float> Vector2<float>::zero{0, 0};
+    constexpr Vector2<float> Vector2<float>::one {1, 1};
 
     /**
      * @class Vector3
@@ -1381,4 +1378,7 @@ namespace Common {
             return 0;
         }
     };
+
+    constexpr Vector3 Vector3::zero{0, 0, 0};
+    constexpr Vector3 Vector3::one {1, 1, 1};
 }
