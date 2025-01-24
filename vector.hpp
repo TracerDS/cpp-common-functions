@@ -2,13 +2,17 @@
 
 #include <cmath>
 #include <algorithm>
+#include <iostream>
 
 namespace Common {
-    struct IVector {
-        using value_type = float;
-    };
     template <typename Value>
     concept arithmetic = std::integral<Value> || std::floating_point<Value>;
+
+    template <arithmetic Value>
+    class Vector2;
+
+    template <arithmetic Value>
+    class Vector3;
 
     /**
      * @class Vector2
@@ -18,21 +22,21 @@ namespace Common {
      * basic arithmetic operations, normalization, dot product, and more.
      * 
      * @tparam value_type The type of the vector components.
-     */     
-    //template <arithmetic Value = float>
+     */
+    template <arithmetic Value = float>
     class Vector2 {
     public:
-        using value_type = IVector::value_type;
-    protected:
+        using value_type = Value;
+        
         /**
          * @brief A member variable of type value_type representing the x-coordinate.
          */
-        value_type m_x;
+        value_type x;
         /**
          * @brief A member variable of type value_type representing the y-coordinate.
          */
-        value_type m_y;
-    public:
+        value_type y;
+        
         /**
          * @brief A constant static member representing a zero vector.
          * 
@@ -62,7 +66,7 @@ namespace Common {
          * @param x The x-coordinate of the vector.
          * @param y The y-coordinate of the vector.
          */
-        constexpr Vector2(value_type x, value_type y) noexcept : m_x{x}, m_y{y} {}
+        constexpr Vector2(value_type x, value_type y) noexcept : x{x}, y{y} {}
 
         /**
          * @brief Constructs a Vector2 object from a Vector3 object.
@@ -72,39 +76,7 @@ namespace Common {
          * 
          * @param other The Vector3 object from which to initialize the Vector2 object.
          */
-        constexpr Vector2(Vector3 other) noexcept;
-
-        /**
-         * @brief Retrieves the X coordinate value.
-         * 
-         * @return The X coordinate value of type value_type.
-         */
-        constexpr value_type GetX() const noexcept { return m_x; }
-
-        /**
-         * @brief Retrieves the Y coordinate value.
-         * 
-         * @return The Y coordinate value of type value_type.
-         */
-        constexpr value_type GetY() const noexcept { return m_y; }
-
-        /**
-         * @brief Sets the x-coordinate of the vector.
-         * 
-         * This function sets the x-coordinate of the vector to the specified value.
-         * 
-         * @param x The new value for the x-coordinate.
-         */
-        constexpr void SetX(value_type x) noexcept { m_x = x; }
-        
-        /**
-         * @brief Sets the y-coordinate of the vector.
-         * 
-         * This function sets the y-coordinate of the vector to the specified value.
-         * 
-         * @param y The new value for the y-coordinate.
-         */
-        constexpr void SetY(value_type y) noexcept { m_y = y; }
+        constexpr Vector2(Vector3<value_type> other) noexcept;
 
         /**
          * @brief Calculates the squared length of the vector.
@@ -114,7 +86,7 @@ namespace Common {
          * 
          * @return The squared length of the vector.
          */
-        constexpr value_type Length() const noexcept { return m_x * m_x + m_y * m_y; }
+        constexpr value_type Length() const noexcept { return x * x + y * y; }
         
         /**
          * @brief Computes the square root of the length of the vector.
@@ -141,7 +113,12 @@ namespace Common {
         static value_type Distance(const Vector2& a, const Vector2& b) noexcept { return (b - a).LengthSqrt(); }
 		
         /**
-         * @brief Calculates the distance between this vector and another vector.
+         * @brief Calculates the Euclidean distance between two 2D vectors.
+         * 
+         * This function computes the distance between two points in 2D space
+         * represented by the vectors `a` and `b`. The distance is calculated
+         * using the square root of the sum of the squared differences of their
+         * respective components.
          * 
          * @param other The other vector to calculate the distance to.
          * @return value_type The distance between the two vectors.
@@ -162,7 +139,7 @@ namespace Common {
             value_type length = LengthSqrt();
             if (length == 0)
                 return Vector2::zero;
-            return { m_x / length, m_y / length };
+            return { x / length, y / length };
         }
         
         /**
@@ -176,11 +153,11 @@ namespace Common {
         Vector2& Normalize() noexcept {
             value_type length = LengthSqrt();
             if (length != 0) {
-                m_x = 0;
-                m_y = 0;
+                x = 0;
+                y = 0;
             } else {
-                m_x /= length;
-                m_y /= length;
+                x /= length;
+                y /= length;
             }
 
             return *this;
@@ -194,7 +171,7 @@ namespace Common {
          * @return value_type The dot product of vectors a and b.
          */
         constexpr static value_type Dot(const Vector2& a, const Vector2& b) noexcept {
-            return a.m_x * b.m_x + a.m_y * b.m_y;
+            return a.x * b.x + a.y * b.y;
         }
 
         /**
@@ -225,8 +202,8 @@ namespace Common {
 
             auto product = vector.Dot(projectOn);
             return {
-                projectOn.m_x * product / projectProduct,
-                projectOn.m_y * product / projectProduct
+                projectOn.x * product / projectProduct,
+                projectOn.y * product / projectProduct
             };
         }
 
@@ -253,7 +230,7 @@ namespace Common {
          * @return The reflected vector.
          */
         static Vector2 Reflect(const Vector2& a, const Vector2& b) noexcept {
-            return a - b * 2.0f * a.Dot(b);
+            return a - b * 2 * a.Dot(b);
         }
 
         /**
@@ -310,9 +287,9 @@ namespace Common {
         constexpr static Vector2 Lerp (
             const Vector2& a,
             const Vector2& b,
-            value_type t
+            std::floating_point t
         ) noexcept {
-            return LerpUnclamped(a, b, std::clamp(t, 0.0f, 1.0f));
+            return LerpUnclamped(a, b, std::clamp(t, 0, 1));
         }
 
         /**
@@ -328,7 +305,7 @@ namespace Common {
          *          - Values between 0 and 1 will interpolate linearly between the two vectors.
          * @return A new Vector2 that is the result of the linear interpolation.
          */
-        constexpr Vector2 Lerp(const Vector2& other, value_type t) noexcept {
+        constexpr Vector2 Lerp(const Vector2& other, std::floating_point t) noexcept {
             return Vector2::Lerp(*this, other, t);
         }
 
@@ -343,9 +320,9 @@ namespace Common {
          * @param t The interpolation factor, typically in the range [0, 1].
          * @return The interpolated vector.
          */
-        static Vector2 Slerp(const Vector2& a, const Vector2& b, float t) noexcept {
-            auto dotProduct = std::clamp(a.Dot(b), -1.0f, 1.0f);
-            float theta = std::acos(dotProduct) * std::clamp(t, 0.0f, 1.0f);
+        static Vector2 Slerp(const Vector2& a, const Vector2& b, std::floating_point t) noexcept {
+            auto dotProduct = std::clamp(a.Dot(b), -1, 1);
+            auto theta = std::acos(dotProduct) * std::clamp(t, 0, 1);
 
             Vector2 relativeVec = (b - a * dotProduct).Normalize();
             return a * std::cos(theta) + relativeVec * std::sin(theta);
@@ -362,7 +339,7 @@ namespace Common {
          * and 1 returns the other vector.
          * @return Vector2 The interpolated vector.
          */
-		Vector2 Slerp(const Vector2& other, float t) const noexcept {
+		Vector2 Slerp(const Vector2& other, std::floating_point t) const noexcept {
 			return Vector2::Slerp(*this, other, t);
 		}
 
@@ -384,8 +361,8 @@ namespace Common {
             value_type t
         ) noexcept {
             return {
-                a.m_x + t * (b.m_x - a.m_x),
-                a.m_y + t * (b.m_y - a.m_y)
+                a.x + t * (b.x - a.x),
+                a.y + t * (b.y - a.y)
             };
         }
 
@@ -402,7 +379,7 @@ namespace Common {
          *          [0, 1] will extrapolate accordingly.
          * @return Vector2 The interpolated vector.
          */
-        constexpr Vector2 LerpUnclamped(const Vector2& other, value_type t) noexcept {
+        constexpr Vector2 LerpUnclamped(const Vector2& other, std::floating_point t) noexcept {
             return Vector2::LerpUnclamped(*this, other, t);
         }
 
@@ -415,7 +392,7 @@ namespace Common {
          * @return A new Vector2 object that is the result of the addition.
          */
         constexpr Vector2 operator+(const Vector2& other) const noexcept {
-            return { m_x + other.m_x, m_y + other.m_y };
+            return { x + other.x, y + other.y };
         }
 
         /**
@@ -428,7 +405,7 @@ namespace Common {
          * @return A new Vector2 resulting from the component-wise subtraction.
          */
         constexpr Vector2 operator-(const Vector2& other) const noexcept {
-            return { m_x - other.m_x, m_y - other.m_y };
+            return { x - other.x, y - other.y };
         }
         
         /**
@@ -441,7 +418,7 @@ namespace Common {
          * @return A new Vector2 object resulting from the component-wise multiplication.
          */
         constexpr Vector2 operator*(const Vector2& other) const noexcept {
-            return { m_x * other.m_x, m_y * other.m_y };
+            return { x * other.x, y * other.y };
         }
 
         /**
@@ -456,7 +433,7 @@ namespace Common {
          * @note This operation assumes that the components of the other vector are non-zero.
          */
         constexpr Vector2 operator/(const Vector2& other) const noexcept {
-            return { m_x / other.m_x, m_y / other.m_y };
+            return { x / other.x, y / other.y };
         }
         
         /**
@@ -469,7 +446,7 @@ namespace Common {
          * @return A new Vector2 object with each component increased by the scalar value.
          */
         constexpr Vector2 operator+(value_type scalar) const noexcept {
-            return { m_x + scalar, m_y + scalar };
+            return { x + scalar, y + scalar };
         }
 
         /**
@@ -482,7 +459,7 @@ namespace Common {
          * @return A new Vector2 instance with each component reduced by the scalar value.
          */
         constexpr Vector2 operator-(value_type scalar) const noexcept {
-            return { m_x - scalar, m_y - scalar };
+            return { x - scalar, y - scalar };
         }
 
         /**
@@ -496,7 +473,7 @@ namespace Common {
          * @return A new Vector2 object with each component scaled by the scalar value.
          */
         constexpr Vector2 operator*(value_type scalar) const noexcept {
-            return { m_x * scalar, m_y * scalar };
+            return { x * scalar, y * scalar };
         }
 
         /**
@@ -510,7 +487,7 @@ namespace Common {
          * @note This function is marked as noexcept, indicating that it does not throw exceptions.
          */
         constexpr Vector2 operator/(value_type scalar) const noexcept {
-            return { m_x / scalar, m_y / scalar };
+            return { x / scalar, y / scalar };
         }
         
         /**
@@ -522,8 +499,8 @@ namespace Common {
          * @return A reference to this vector after addition.
          */
         constexpr Vector2& operator+=(const Vector2& other) noexcept {
-            this->m_x += other.m_x;
-            this->m_y += other.m_y;
+            this->x += other.x;
+            this->y += other.y;
             return *this;
         }
 
@@ -537,8 +514,8 @@ namespace Common {
          * @return A reference to the modified vector.
          */
         constexpr Vector2& operator-=(const Vector2& other) noexcept {
-            this->m_x -= other.m_x;
-            this->m_y -= other.m_y;
+            this->x -= other.x;
+            this->y -= other.y;
             return *this;
         }
 
@@ -551,8 +528,8 @@ namespace Common {
          * @return A reference to the resulting vector after multiplication.
          */
         constexpr Vector2& operator*=(const Vector2& other) noexcept {
-            this->m_x *= other.m_x;
-            this->m_y *= other.m_y;
+            this->x *= other.x;
+            this->y *= other.y;
             return *this;
         }
 
@@ -565,8 +542,8 @@ namespace Common {
          * @return A reference to this vector after the division.
          */
         constexpr Vector2& operator/=(const Vector2& other) noexcept {
-            this->m_x /= other.m_x;
-            this->m_y /= other.m_y;
+            this->x /= other.x;
+            this->y /= other.y;
             return *this;
         }
 
@@ -578,7 +555,7 @@ namespace Common {
          * @return false otherwise.
          */
         constexpr bool operator==(const Vector2& other) const noexcept {
-            return m_x == other.m_x && m_y == other.m_y;
+            return x == other.x && y == other.y;
         }
         
         /**
@@ -595,79 +572,28 @@ namespace Common {
         }
 
         /**
-         * @brief Compares the length squared of the vector to a scalar value.
-         * 
-         * This operator checks if the length squared of the vector is equal to the given scalar value.
-         * 
-         * @param scalar The scalar value to compare with the length squared of the vector.
-         * @return true if the length squared of the vector is equal to the scalar value, false otherwise.
-         */
-        bool operator==(value_type scalar) const noexcept { return this->LengthSqrt() == scalar; }
-
-        /**
-         * @brief Inequality operator to compare the vector with a scalar value.
-         * 
-         * This operator checks if the vector is not equal to the given scalar value.
-         * It returns true if the vector is not equal to the scalar, and false otherwise.
-         * 
-         * @param scalar The scalar value to compare with the vector.
-         * @return true if the vector is not equal to the scalar, false otherwise.
-         */
-        bool operator!=(value_type scalar) const noexcept { return !(*this == scalar); }
-
-        /**
-         * @brief Compares the length of this vector with another vector.
-         * 
-         * This operator compares the lengths of two vectors and returns true if the length
-         * of this vector is less than the length of the other vector.
-         * 
-         * @param other The vector to compare with.
-         * @return true if the length of this vector is less than the length of the other vector, false otherwise.
-         */
-        constexpr bool operator<(const Vector2& other) const noexcept {
-            return Length() < other.Length();
-        }
-        
-        /**
-         * @brief Checks if this vector is less than or equal to another vector.
-         * @param other The vector to compare.
-         * @return True if this vector is less than or equal to the other vector, false otherwise.
-         */
-        constexpr bool operator<=(const Vector2& other) const noexcept {
-            return Length() <= other.Length();
-        }
-        /**
-         * @brief Checks if this vector is greater than another vector.
-         * @param other The vector to compare.
-         * @return True if this vector is greater than the other vector, false otherwise.
-         */
-        constexpr bool operator>(const Vector2& other) const noexcept {
-            return Length() > other.Length();
-        }
-        
-        /**
-         * @brief Checks if this vector is greater than or equal to another vector.
-         * @param other The vector to compare.
-         * @return True if this vector is greater than or equal to the other vector, false otherwise.
-         */
-        constexpr bool operator>=(const Vector2& other) const noexcept {
-            return Length() >= other.Length();
-        }
-
-        /**
          * @brief Compares this vector with another vector.
          * @param other The vector to compare.
          * @return -1 if this vector is less than the other vector, 1 if greater, 0 if equal.
          */
-        constexpr std::strong_ordering operator<=>(const Vector3& other) const noexcept {
-            if (operator<(other)) return std::strong_ordering::less;
-            if (operator>(other)) return std::strong_ordering::greater;
-            return std::strong_ordering::equal;
+        constexpr std::partial_ordering operator<=>(const Vector2& other) const noexcept {
+            if (x == other.x && y == other.y)
+                return std::partial_ordering::equivalent;
+                
+            const auto l1 = Length();
+            const auto l2 = other.Length();
+
+            if (l1 < l2) return std::partial_ordering::less;
+            else if (l1 > l2) return std::partial_ordering::greater;
+            else return std::partial_ordering::unordered;
         }
     };
 
-    constexpr Vector3 Vector3::zero{0, 0, 0};
-    constexpr Vector3 Vector3::one {1, 1, 1};
+    template <arithmetic T>
+    constexpr Vector2<T> Vector2<T>::zero{0, 0};
+    
+    template <arithmetic T>
+    constexpr Vector2<T> Vector2<T>::one {1, 1};
 
     /**
      * @class Vector3
@@ -677,23 +603,24 @@ namespace Common {
      * basic arithmetic operations, normalization, dot product, cross product, and more.
      * 
      * @tparam value_type The type of the vector components.
-     */     
+     */
+    template <arithmetic Value = float>
     class Vector3 {
     public:
-        using value_type = IVector::value_type;
+        using value_type = Value;
     protected:
         /**
          * @brief A member variable of type value_type representing the x-coordinate.
          */
-        value_type m_x;
+        value_type x;
         /**
          * @brief A member variable of type value_type representing the y-coordinate.
          */
-        value_type m_y;
+        value_type y;
         /**
          * @brief A member variable of type value_type representing the z-coordinate.
          */
-        value_type m_z;
+        value_type z;
     public:
         /**
          * @brief A constant static member representing a zero vector.
@@ -725,7 +652,7 @@ namespace Common {
          * @param y The y-coordinate of the vector.
          * @param z The z-coordinate of the vector.
          */
-        constexpr Vector3(value_type x, value_type y, value_type z) noexcept : m_x{x}, m_y{y}, m_z{z} {}
+        constexpr Vector3(value_type x, value_type y, value_type z) noexcept : x{x}, y{y}, z{z} {}
 
         /**
          * @brief Constructs a Vector3 object from a Vector2 object.
@@ -735,55 +662,7 @@ namespace Common {
          * 
          * @param other The Vector2 object from which to initialize the Vector3 object.
          */
-        constexpr Vector3(Vector2 other) noexcept;
-
-        /**
-         * @brief Retrieves the X coordinate value.
-         * 
-         * @return The X coordinate value of type value_type.
-         */
-        constexpr value_type GetX() const noexcept { return m_x; }
-
-        /**
-         * @brief Retrieves the Y coordinate value.
-         * 
-         * @return The Y coordinate value of type value_type.
-         */
-        constexpr value_type GetY() const noexcept { return m_y; }
-
-        /**
-         * @brief Retrieves the Z coordinate value.
-         * 
-         * @return The Z coordinate value of type value_type.
-         */
-        constexpr value_type GetZ() const noexcept { return m_z; }
-
-        /**
-         * @brief Sets the x-coordinate of the vector.
-         * 
-         * This function sets the x-coordinate of the vector to the specified value.
-         * 
-         * @param x The new value for the x-coordinate.
-         */
-        constexpr void SetX(value_type x) noexcept { m_x = x; }
-        
-        /**
-         * @brief Sets the y-coordinate of the vector.
-         * 
-         * This function sets the y-coordinate of the vector to the specified value.
-         * 
-         * @param y The new value for the y-coordinate.
-         */
-        constexpr void SetY(value_type y) noexcept { m_y = y; }
-        
-        /**
-         * @brief Sets the z-coordinate of the vector.
-         * 
-         * This function sets the z-coordinate of the vector to the specified value.
-         * 
-         * @param z The new value for the z-coordinate.
-         */
-        constexpr void SetZ(value_type z) noexcept { m_y = z; }
+        constexpr Vector3(Vector2<value_type> other) noexcept;
 
         /**
          * @brief Calculates the squared length of the vector.
@@ -793,7 +672,7 @@ namespace Common {
          * 
          * @return The squared length of the vector.
          */
-        constexpr value_type Length() const noexcept { return m_x * m_x + m_y * m_y; }
+        constexpr value_type Length() const noexcept { return x * x + y * y + z * z; }
         
         /**
          * @brief Computes the square root of the length of the vector.
@@ -841,7 +720,7 @@ namespace Common {
             value_type length = LengthSqrt();
             if (length == 0)
                 return Vector3::zero;
-            return { m_x / length, m_y / length, m_z / length };
+            return { x / length, y / length, z / length };
         }
         
         /**
@@ -855,13 +734,13 @@ namespace Common {
         Vector3& Normalize() noexcept {
             value_type length = LengthSqrt();
             if (length != 0) {
-                m_x = 0;
-                m_y = 0;
-                m_z = 0;
+                x = 0;
+                y = 0;
+                z = 0;
             } else {
-                m_x /= length;
-                m_y /= length;
-                m_z /= length;
+                x /= length;
+                y /= length;
+                z /= length;
             }
 
             return *this;
@@ -875,7 +754,7 @@ namespace Common {
          * @return value_type The dot product of vectors a and b.
          */
         constexpr static value_type Dot(const Vector3& a, const Vector3& b) noexcept {
-            return a.m_x * b.m_x + a.m_y * b.m_y + a.m_z * b.m_z;
+            return a.x * b.x + a.y * b.y + a.z * b.z;
         }
 
         /**
@@ -906,9 +785,9 @@ namespace Common {
 
             auto product = vector.Dot(projectOn);
             return {
-                projectOn.m_x * product / projectProduct,
-                projectOn.m_y * product / projectProduct,
-                projectOn.m_z * product / projectProduct
+                projectOn.x * product / projectProduct,
+                projectOn.y * product / projectProduct,
+                projectOn.z * product / projectProduct
             };
         }
 
@@ -935,7 +814,7 @@ namespace Common {
          * @return The reflected vector.
          */
         static Vector3 Reflect(const Vector3& a, const Vector3& b) noexcept {
-            return a - b * 2.0f * a.Dot(b);
+            return a - b * 2 * a.Dot(b);
         }
 
         /**
@@ -962,7 +841,7 @@ namespace Common {
         constexpr static value_type Angle(const Vector3& a, const Vector3& b) noexcept {
 			auto magnitude = a.Length() * b.Length();
 			if (magnitude == 0)
-                return 0.0f;
+                return 0;
 
             auto product = a.Dot(b);
 			return std::acos(product / magnitude);
@@ -991,9 +870,9 @@ namespace Common {
          */
         constexpr static Vector3 Cross(const Vector3& a, const Vector3& b) noexcept {
             return {
-                a.m_y * b.m_z - a.m_z * b.m_y,
-                a.m_z * b.m_x - a.m_x * b.m_z,
-                a.m_x * b.m_y - a.m_y * b.m_x
+                a.y * b.z - a.z * b.y,
+                a.z * b.x - a.x * b.z,
+                a.x * b.y - a.y * b.x
             };
         }
 
@@ -1021,9 +900,9 @@ namespace Common {
         constexpr static Vector3 Lerp (
             const Vector3& a,
             const Vector3& b,
-            value_type t
+            std::floating_point t
         ) noexcept {
-            return LerpUnclamped(a, b, std::clamp(t, 0.0f, 1.0f));
+            return LerpUnclamped(a, b, std::clamp(t, 0, 1));
         }
 
         /**
@@ -1039,7 +918,7 @@ namespace Common {
          *          - Values between 0 and 1 will interpolate linearly between the two vectors.
          * @return A new Vector3 that is the result of the linear interpolation.
          */
-        constexpr Vector3 Lerp(const Vector3& other, value_type t) noexcept {
+        constexpr Vector3 Lerp(const Vector3& other, std::floating_point t) noexcept {
             return Vector3::Lerp(*this, other, t);
         }
 
@@ -1054,9 +933,9 @@ namespace Common {
          * @param t The interpolation factor, typically in the range [0, 1].
          * @return The interpolated vector.
          */
-        static Vector3 Slerp(const Vector3& a, const Vector3& b, float t) noexcept {
+        static Vector3 Slerp(const Vector3& a, const Vector3& b, std::floating_point t) noexcept {
             auto dotProduct = std::clamp(a.Dot(b), -1.0f, 1.0f);
-            float theta = std::acos(dotProduct) * std::clamp(t, 0.0f, 1.0f);
+            auto theta = std::acos(dotProduct) * std::clamp(t, 0.0f, 1.0f);
 
             Vector3 relativeVec = (b - a * dotProduct).Normalize();
             return a * std::cos(theta) + relativeVec * std::sin(theta);
@@ -1073,7 +952,7 @@ namespace Common {
          * and 1 returns the other vector.
          * @return Vector3 The interpolated vector.
          */
-		Vector3 Slerp(const Vector3& other, float t) const noexcept {
+		Vector3 Slerp(const Vector3& other, std::floating_point t) const noexcept {
 			return Vector3::Slerp(*this, other, t);
 		}
 
@@ -1095,9 +974,9 @@ namespace Common {
             value_type t
         ) noexcept {
             return {
-                a.m_x + t * (b.m_x - a.m_x),
-                a.m_y + t * (b.m_y - a.m_y),
-                a.m_z + t * (b.m_z - a.m_z)
+                a.x + t * (b.x - a.x),
+                a.y + t * (b.y - a.y),
+                a.z + t * (b.z - a.z)
             };
         }
 
@@ -1127,7 +1006,7 @@ namespace Common {
          * @return A new Vector3 object that is the result of the addition.
          */
         constexpr Vector3 operator+(const Vector3& other) const noexcept {
-            return { m_x + other.m_x, m_y + other.m_y, m_z + other.m_z };
+            return { x + other.x, y + other.y, z + other.z };
         }
 
         /**
@@ -1140,7 +1019,7 @@ namespace Common {
          * @return A new Vector3 resulting from the component-wise subtraction.
          */
         constexpr Vector3 operator-(const Vector3& other) const noexcept {
-            return { m_x - other.m_x, m_y - other.m_y, m_z - other.m_z };
+            return { x - other.x, y - other.y, z - other.z };
         }
         
         /**
@@ -1153,7 +1032,7 @@ namespace Common {
          * @return A new Vector3 object resulting from the component-wise multiplication.
          */
         constexpr Vector3 operator*(const Vector3& other) const noexcept {
-            return { m_x * other.m_x, m_y * other.m_y, m_z * other.m_z };
+            return { x * other.x, y * other.y, z * other.z };
         }
 
         /**
@@ -1168,7 +1047,7 @@ namespace Common {
          * @note This operation assumes that the components of the other vector are non-zero.
          */
         constexpr Vector3 operator/(const Vector3& other) const noexcept {
-            return { m_x / other.m_x, m_y / other.m_y, m_z / other.m_z };
+            return { x / other.x, y / other.y, z / other.z };
         }
         
         /**
@@ -1181,7 +1060,7 @@ namespace Common {
          * @return A new Vector3 object with each component increased by the scalar value.
          */
         constexpr Vector3 operator+(value_type scalar) const noexcept {
-            return { m_x + scalar, m_y + scalar, m_z + scalar };
+            return { x + scalar, y + scalar, z + scalar };
         }
 
         /**
@@ -1194,7 +1073,7 @@ namespace Common {
          * @return A new Vector3 instance with each component reduced by the scalar value.
          */
         constexpr Vector3 operator-(value_type scalar) const noexcept {
-            return { m_x - scalar, m_y - scalar, m_z - scalar };
+            return { x - scalar, y - scalar, z - scalar };
         }
 
         /**
@@ -1208,7 +1087,7 @@ namespace Common {
          * @return A new Vector3 object with each component scaled by the scalar value.
          */
         constexpr Vector3 operator*(value_type scalar) const noexcept {
-            return { m_x * scalar, m_y * scalar, m_z * scalar };
+            return { x * scalar, y * scalar, z * scalar };
         }
 
         /**
@@ -1222,7 +1101,7 @@ namespace Common {
          * @note This function is marked as noexcept, indicating that it does not throw exceptions.
          */
         constexpr Vector3 operator/(value_type scalar) const noexcept {
-            return { m_x / scalar, m_y / scalar, m_z / scalar };
+            return { x / scalar, y / scalar, z / scalar };
         }
         
         /**
@@ -1234,9 +1113,9 @@ namespace Common {
          * @return A reference to this vector after addition.
          */
         constexpr Vector3& operator+=(const Vector3& other) noexcept {
-            this->m_x += other.m_x;
-            this->m_y += other.m_y;
-            this->m_z += other.m_z;
+            this->x += other.x;
+            this->y += other.y;
+            this->z += other.z;
             return *this;
         }
 
@@ -1250,9 +1129,9 @@ namespace Common {
          * @return A reference to the modified vector.
          */
         constexpr Vector3& operator-=(const Vector3& other) noexcept {
-            this->m_x -= other.m_x;
-            this->m_y -= other.m_y;
-            this->m_z -= other.m_z;
+            this->x -= other.x;
+            this->y -= other.y;
+            this->z -= other.z;
             return *this;
         }
 
@@ -1265,9 +1144,9 @@ namespace Common {
          * @return A reference to the resulting vector after multiplication.
          */
         constexpr Vector3& operator*=(const Vector3& other) noexcept {
-            this->m_x *= other.m_x;
-            this->m_y *= other.m_y;
-            this->m_z *= other.m_z;
+            this->x *= other.x;
+            this->y *= other.y;
+            this->z *= other.z;
             return *this;
         }
 
@@ -1280,9 +1159,9 @@ namespace Common {
          * @return A reference to this vector after the division.
          */
         constexpr Vector3& operator/=(const Vector3& other) noexcept {
-            this->m_x /= other.m_x;
-            this->m_y /= other.m_y;
-            this->m_z /= other.m_z;
+            this->x /= other.x;
+            this->y /= other.y;
+            this->z /= other.z;
             return *this;
         }
 
@@ -1294,7 +1173,7 @@ namespace Common {
          * @return false otherwise.
          */
         constexpr bool operator==(const Vector3& other) const noexcept {
-            return m_x == other.m_x && m_y == other.m_y && m_z == other.m_z;
+            return x == other.x && y == other.y && z == other.z;
         }
         
         /**
@@ -1311,63 +1190,20 @@ namespace Common {
         }
 
         /**
-         * @brief Compares the length squared of the vector to a scalar value.
-         * 
-         * This operator checks if the length squared of the vector is equal to the given scalar value.
-         * 
-         * @param scalar The scalar value to compare with the length squared of the vector.
-         * @return true if the length squared of the vector is equal to the scalar value, false otherwise.
+         * @brief Compares this vector with another vector.
+         * @param other The vector to compare.
+         * @return -1 if this vector is less than the other vector, 1 if greater, 0 if equal.
          */
-        bool operator==(value_type scalar) const noexcept { return this->LengthSqrt() == scalar; }
+        constexpr std::partial_ordering operator<=>(const Vector3& other) const noexcept {
+            if (x == other.x && y == other.y && z == other.z)
+                return std::partial_ordering::equivalent;
+                
+            const auto l1 = Length();
+            const auto l2 = other.Length();
 
-        /**
-         * @brief Inequality operator to compare the vector with a scalar value.
-         * 
-         * This operator checks if the vector is not equal to the given scalar value.
-         * It returns true if the vector is not equal to the scalar, and false otherwise.
-         * 
-         * @param scalar The scalar value to compare with the vector.
-         * @return true if the vector is not equal to the scalar, false otherwise.
-         */
-        bool operator!=(value_type scalar) const noexcept { return !(*this == scalar); }
-
-        /**
-         * @brief Compares the length of this vector with another vector.
-         * 
-         * This operator compares the lengths of two vectors and returns true if the length
-         * of this vector is less than the length of the other vector.
-         * 
-         * @param other The vector to compare with.
-         * @return true if the length of this vector is less than the length of the other vector, false otherwise.
-         */
-        constexpr bool operator<(const Vector3& other) const noexcept {
-            return Length() < other.Length();
-        }
-        
-        /**
-         * @brief Checks if this vector is less than or equal to another vector.
-         * @param other The vector to compare.
-         * @return True if this vector is less than or equal to the other vector, false otherwise.
-         */
-        constexpr bool operator<=(const Vector3& other) const noexcept {
-            return Length() <= other.Length();
-        }
-        /**
-         * @brief Checks if this vector is greater than another vector.
-         * @param other The vector to compare.
-         * @return True if this vector is greater than the other vector, false otherwise.
-         */
-        constexpr bool operator>(const Vector3& other) const noexcept {
-            return Length() > other.Length();
-        }
-        
-        /**
-         * @brief Checks if this vector is greater than or equal to another vector.
-         * @param other The vector to compare.
-         * @return True if this vector is greater than or equal to the other vector, false otherwise.
-         */
-        constexpr bool operator>=(const Vector3& other) const noexcept {
-            return Length() >= other.Length();
+            if (l1 < l2) return std::partial_ordering::less;
+            else if (l1 > l2) return std::partial_ordering::greater;
+            else return std::partial_ordering::unordered;
         }
 
         /**
@@ -1375,10 +1211,28 @@ namespace Common {
          * @param other The vector to compare.
          * @return -1 if this vector is less than the other vector, 1 if greater, 0 if equal.
          */
-        constexpr std::strong_ordering operator<=>(const Vector3& other) const noexcept {
-            if (operator<(other)) return std::strong_ordering::less;
-            if (operator>(other)) return std::strong_ordering::greater;
-            return std::strong_ordering::equal;
+        constexpr std::partial_ordering operator<=>(value_type other) const noexcept {                
+            const auto l1 = Length();
+
+            if (l1 < other) return std::partial_ordering::less;
+            else if (l1 > other) return std::partial_ordering::greater;
+            else if (l1 == other) return std::partial_ordering::equivalent;
+            else return std::partial_ordering::unordered;
         }
     };
+
+    template <arithmetic T>
+    constexpr Vector3<T> Vector3<T>::zero{0, 0, 0};
+    
+    template <arithmetic T>
+    constexpr Vector3<T> Vector3<T>::one {1, 1, 1};
+
+    template <arithmetic T>
+    constexpr Vector2<T>::Vector2(Vector3<T> other) noexcept : Vector2(other.x, other.y) {}
+    
+    template <arithmetic T>
+    constexpr Vector3<T>::Vector3(Vector2<T> other) noexcept : Vector3(other.x, other.y, 0) {}
+
+    using FVector2 = Vector2<float>;
+    using FVector3 = Vector3<float>;
 }
