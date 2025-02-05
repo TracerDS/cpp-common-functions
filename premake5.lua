@@ -13,6 +13,7 @@ project "cpp-common-functions"
     vpaths {
         ["Headers"] = { "*.hpp" }
     }
+    includedirs { "." }
 
     filter { "platforms:x86" }
         architecture "x86"
