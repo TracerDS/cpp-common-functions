@@ -1141,305 +1141,305 @@ int gladLoadGLLoader(GLADloadproc load) {
 
 #ifndef __GL_FUNCTION_MACROS__
 GLAPI void glCullFace(GLenum mode) {
-	return glad_glCullFace(mode);
+	glad_glCullFace(mode);
 }
 GLAPI void glFrontFace(GLenum mode) {
-	return glad_glFrontFace(mode);
+	glad_glFrontFace(mode);
 }
 GLAPI void glHint(GLenum target, GLenum mode) {
-	return glad_glHint(target, mode);
+	glad_glHint(target, mode);
 }
 GLAPI void glLineWidth(GLfloat width) {
-	return glad_glLineWidth(width);
+	glad_glLineWidth(width);
 }
 GLAPI void glPointSize(GLfloat size) {
-	return glad_glPointSize(size);
+	glad_glPointSize(size);
 }
 GLAPI void glPolygonMode(GLenum face, GLenum mode) {
-	return glad_glPolygonMode(face, mode);
+	glad_glPolygonMode(face, mode);
 }
 GLAPI void glScissor(GLint x, GLint y, GLsizei width, GLsizei height) {
-	return glad_glScissor(x, y, width, height);
+	glad_glScissor(x, y, width, height);
 }
 GLAPI void glTexParameterf(GLenum target, GLenum pname, GLfloat param) {
-	return glad_glTexParameterf(target, pname, param);
+	glad_glTexParameterf(target, pname, param);
 }
 GLAPI void glTexParameterfv(GLenum target, GLenum pname, const GLfloat* params) {
-	return glad_glTexParameterfv(target, pname, params);
+	glad_glTexParameterfv(target, pname, params);
 }
 GLAPI void glTexParameteri(GLenum target, GLenum pname, GLint param) {
-	return glad_glTexParameteri(target, pname, param);
+	glad_glTexParameteri(target, pname, param);
 }
 GLAPI void glTexParameteriv(GLenum target, GLenum pname, const GLint* params) {
-	return glad_glTexParameteriv(target, pname, params);
+	glad_glTexParameteriv(target, pname, params);
 }
 GLAPI void glTexImage1D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLint border, GLenum format, GLenum type, const void* pixels) {
-	return glad_glTexImage1D(target, level, internalformat, width, border, format, type, pixels);
+	glad_glTexImage1D(target, level, internalformat, width, border, format, type, pixels);
 }
 GLAPI void glTexImage2D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, const void* pixels) {
-	return glad_glTexImage2D(target, level, internalformat, width, height, border, format, type, pixels);
+	glad_glTexImage2D(target, level, internalformat, width, height, border, format, type, pixels);
 }
 GLAPI void glDrawBuffer(GLenum buf) {
-	return glad_glDrawBuffer(buf);
+	glad_glDrawBuffer(buf);
 }
 GLAPI void glClear(GLbitfield mask) {
-	return glad_glClear(mask);
+	glad_glClear(mask);
 }
 GLAPI void glClearColor(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha) {
-	return glad_glClearColor(red, green, blue, alpha);
+	glad_glClearColor(red, green, blue, alpha);
 }
 GLAPI void glClearStencil(GLint s) {
-	return glad_glClearStencil(s);
+	glad_glClearStencil(s);
 }
 GLAPI void glClearDepth(GLdouble depth) {
-	return glad_glClearDepth(depth);
+	glad_glClearDepth(depth);
 }
 GLAPI void glStencilMask(GLuint mask) {
-	return glad_glStencilMask(mask);
+	glad_glStencilMask(mask);
 }
 GLAPI void glColorMask(GLboolean red, GLboolean green, GLboolean blue, GLboolean alpha) {
-	return glad_glColorMask(red, green, blue, alpha);
+	glad_glColorMask(red, green, blue, alpha);
 }
 GLAPI void glDepthMask(GLboolean flag) {
-	return glad_glDepthMask(flag);
+	glad_glDepthMask(flag);
 }
 GLAPI void glDisable(GLenum cap) {
-	return glad_glDisable(cap);
+	glad_glDisable(cap);
 }
 GLAPI void glEnable(GLenum cap) {
-	return glad_glEnable(cap);
+	glad_glEnable(cap);
 }
 GLAPI void glFinish() {
-	return glad_glFinish();
+	glad_glFinish();
 }
 GLAPI void glFlush() {
-	return glad_glFlush();
+	glad_glFlush();
 }
 GLAPI void glBlendFunc(GLenum sfactor, GLenum dfactor) {
-	return glad_glBlendFunc(sfactor, dfactor);
+	glad_glBlendFunc(sfactor, dfactor);
 }
 GLAPI void glLogicOp(GLenum opcode) {
-	return glad_glLogicOp(opcode);
+	glad_glLogicOp(opcode);
 }
 GLAPI void glStencilFunc(GLenum func, GLint ref, GLuint mask) {
-	return glad_glStencilFunc(func, ref, mask);
+	glad_glStencilFunc(func, ref, mask);
 }
 GLAPI void glStencilOp(GLenum fail, GLenum zfail, GLenum zpass) {
-	return glad_glStencilOp(fail, zfail, zpass);
+	glad_glStencilOp(fail, zfail, zpass);
 }
 GLAPI void glDepthFunc(GLenum func) {
-	return glad_glDepthFunc(func);
+	glad_glDepthFunc(func);
 }
 GLAPI void glPixelStoref(GLenum pname, GLfloat param) {
-	return glad_glPixelStoref(pname, param);
+	glad_glPixelStoref(pname, param);
 }
 GLAPI void glPixelStorei(GLenum pname, GLint param) {
-	return glad_glPixelStorei(pname, param);
+	glad_glPixelStorei(pname, param);
 }
 GLAPI void glReadBuffer(GLenum src) {
-	return glad_glReadBuffer(src);
+	glad_glReadBuffer(src);
 }
 GLAPI void glReadPixels(GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, void* pixels) {
-	return glad_glReadPixels(x, y, width, height, format, type, pixels);
+	glad_glReadPixels(x, y, width, height, format, type, pixels);
 }
 GLAPI void glGetBooleanv(GLenum pname, GLboolean* data) {
-	return glad_glGetBooleanv(pname, data);
+	glad_glGetBooleanv(pname, data);
 }
 GLAPI void glGetDoublev(GLenum pname, GLdouble* data) {
-	return glad_glGetDoublev(pname, data);
+	glad_glGetDoublev(pname, data);
 }
 GLAPI GLenum glGetError() {
 	return glad_glGetError();
 }
 GLAPI void glGetFloatv(GLenum pname, GLfloat* data) {
-	return glad_glGetFloatv(pname, data);
+	glad_glGetFloatv(pname, data);
 }
 GLAPI void glGetIntegerv(GLenum pname, GLint* data) {
-	return glad_glGetIntegerv(pname, data);
+	glad_glGetIntegerv(pname, data);
 }
 GLAPI const GLubyte* glGetString(GLenum name) {
-	return glad_GLubyte(name);
+	return glad_glGetString(name);
 }
 GLAPI void glGetTexImage(GLenum target, GLint level, GLenum format, GLenum type, void* pixels) {
-	return glad_glGetTexImage(target, level, format, type, pixels);
+	glad_glGetTexImage(target, level, format, type, pixels);
 }
 GLAPI void glGetTexParameterfv(GLenum target, GLenum pname, GLfloat* params) {
-	return glad_glGetTexParameterfv(target, pname, params);
+	glad_glGetTexParameterfv(target, pname, params);
 }
 GLAPI void glGetTexParameteriv(GLenum target, GLenum pname, GLint* params) {
-	return glad_glGetTexParameteriv(target, pname, params);
+	glad_glGetTexParameteriv(target, pname, params);
 }
 GLAPI void glGetTexLevelParameterfv(GLenum target, GLint level, GLenum pname, GLfloat* params) {
-	return glad_glGetTexLevelParameterfv(target, level, pname, params);
+	glad_glGetTexLevelParameterfv(target, level, pname, params);
 }
 GLAPI void glGetTexLevelParameteriv(GLenum target, GLint level, GLenum pname, GLint* params) {
-	return glad_glGetTexLevelParameteriv(target, level, pname, params);
+	glad_glGetTexLevelParameteriv(target, level, pname, params);
 }
 GLAPI GLboolean glIsEnabled(GLenum cap) {
 	return glad_glIsEnabled(cap);
 }
 GLAPI void glDepthRange(GLdouble n, GLdouble f) {
-	return glad_glDepthRange(n, f);
+	glad_glDepthRange(n, f);
 }
 GLAPI void glViewport(GLint x, GLint y, GLsizei width, GLsizei height) {
-	return glad_glViewport(x, y, width, height);
+	glad_glViewport(x, y, width, height);
 }
 
 GLAPI void glDrawArrays(GLenum mode, GLint first, GLsizei count) {
-	return glad_glDrawArrays(mode, first, count);
+	glad_glDrawArrays(mode, first, count);
 }
 GLAPI void glDrawElements(GLenum mode, GLsizei count, GLenum type, const void* indices) {
-	return glad_glDrawElements(mode, count, type, indices);
+	glad_glDrawElements(mode, count, type, indices);
 }
 GLAPI void glPolygonOffset(GLfloat factor, GLfloat units) {
-	return glad_glPolygonOffset(factor, units);
+	glad_glPolygonOffset(factor, units);
 }
 GLAPI void glCopyTexImage1D(GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border) {
-	return glad_glCopyTexImage1D(target, level, internalformat, x, y, width, border);
+	glad_glCopyTexImage1D(target, level, internalformat, x, y, width, border);
 }
 GLAPI void glCopyTexImage2D(GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border) {
-	return glad_glCopyTexImage2D(target, level, internalformat, x, y, width, height, border);
+	glad_glCopyTexImage2D(target, level, internalformat, x, y, width, height, border);
 }
 GLAPI void glCopyTexSubImage1D(GLenum target, GLint level, GLint xoffset, GLint x, GLint y, GLsizei width) {
-	return glad_glCopyTexSubImage1D(target, level, xoffset, x, y, width);
+	glad_glCopyTexSubImage1D(target, level, xoffset, x, y, width);
 }
 GLAPI void glCopyTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height) {
-	return glad_glCopyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height);
+	glad_glCopyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height);
 }
 GLAPI void glTexSubImage1D(GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, const void* pixels) {
-	return glad_glTexSubImage1D(target, level, xoffset, width, format, type, pixels);
+	glad_glTexSubImage1D(target, level, xoffset, width, format, type, pixels);
 }
 GLAPI void glTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const void* pixels) {
-	return glad_glTexSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels);
+	glad_glTexSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels);
 }
 GLAPI void glBindTexture(GLenum target, GLuint texture) {
-	return glad_glBindTexture(target, texture);
+	glad_glBindTexture(target, texture);
 }
 GLAPI void glDeleteTextures(GLsizei n, const GLuint* textures) {
-	return glad_glDeleteTextures(n, textures);
+	glad_glDeleteTextures(n, textures);
 }
 GLAPI void glGenTextures(GLsizei n, GLuint* textures) {
-	return glad_glGenTextures(n, textures);
+	glad_glGenTextures(n, textures);
 }
 GLAPI GLboolean glIsTexture(GLuint texture) {
 	return glad_glIsTexture(texture);
 }
 
 GLAPI void glDrawRangeElements(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const void* indices) {
-	return glad_glDrawRangeElements(mode, start, end, count, type, indices);
+	glad_glDrawRangeElements(mode, start, end, count, type, indices);
 }
 GLAPI void glTexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const void* pixels) {
-	return glad_glTexImage3D(target, level, internalformat, width, height, depth, border, format, type, pixels);
+	glad_glTexImage3D(target, level, internalformat, width, height, depth, border, format, type, pixels);
 }
 GLAPI void glTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const void* pixels) {
-	return glad_glTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels);
+	glad_glTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels);
 }
 GLAPI void glCopyTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height) {
-	return glad_glCopyTexSubImage3D(target, level, xoffset, yoffset, zoffset, x, y, width, height);
+	glad_glCopyTexSubImage3D(target, level, xoffset, yoffset, zoffset, x, y, width, height);
 }
 
 
 GLAPI void glActiveTexture(GLenum texture) {
-	return glad_glActiveTexture(texture);
+	glad_glActiveTexture(texture);
 }
 GLAPI void glSampleCoverage(GLfloat value, GLboolean invert) {
-	return glad_glSampleCoverage(value, invert);
+	glad_glSampleCoverage(value, invert);
 }
 GLAPI void glCompressedTexImage3D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const void* data) {
-	return glad_glCompressedTexImage3D(target, level, internalformat, width, height, depth, border, imageSize, data);
+	glad_glCompressedTexImage3D(target, level, internalformat, width, height, depth, border, imageSize, data);
 }
 GLAPI void glCompressedTexImage2D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const void* data) {
-	return glad_glCompressedTexImage2D(target, level, internalformat, width, height, border, imageSize, data);
+	glad_glCompressedTexImage2D(target, level, internalformat, width, height, border, imageSize, data);
 }
 GLAPI void glCompressedTexImage1D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const void* data) {
-	return glad_glCompressedTexImage1D(target, level, internalformat, width, border, imageSize, data);
+	glad_glCompressedTexImage1D(target, level, internalformat, width, border, imageSize, data);
 }
 GLAPI void glCompressedTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const void* data) {
-	return glad_glCompressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, data);
+	glad_glCompressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, data);
 }
 GLAPI void glCompressedTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const void* data) {
-	return glad_glCompressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, imageSize, data);
+	glad_glCompressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, imageSize, data);
 }
 GLAPI void glCompressedTexSubImage1D(GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const void* data) {
-	return glad_glCompressedTexSubImage1D(target, level, xoffset, width, format, imageSize, data);
+	glad_glCompressedTexSubImage1D(target, level, xoffset, width, format, imageSize, data);
 }
 GLAPI void glGetCompressedTexImage(GLenum target, GLint level, void* img) {
-	return glad_glGetCompressedTexImage(target, level, img);
+	glad_glGetCompressedTexImage(target, level, img);
 }
 
 
 GLAPI void glBlendFuncSeparate(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha) {
-	return glad_glBlendFuncSeparate(sfactorRGB, dfactorRGB, sfactorAlpha, dfactorAlpha);
+	glad_glBlendFuncSeparate(sfactorRGB, dfactorRGB, sfactorAlpha, dfactorAlpha);
 }
 GLAPI void glMultiDrawArrays(GLenum mode, const GLint* first, const GLsizei* count, GLsizei drawcount) {
-	return glad_glMultiDrawArrays(mode, first, count, drawcount);
+	glad_glMultiDrawArrays(mode, first, count, drawcount);
 }
 GLAPI void glMultiDrawElements(GLenum mode, const GLsizei* count, GLenum type, const void* const* indices, GLsizei drawcount) {
-	return glad_glMultiDrawElements(mode, count, type, indices, drawcount);
+	glad_glMultiDrawElements(mode, count, type, indices, drawcount);
 }
 GLAPI void glPointParameterf(GLenum pname, GLfloat param) {
-	return glad_glPointParameterf(pname, param);
+	glad_glPointParameterf(pname, param);
 }
 GLAPI void glPointParameterfv(GLenum pname, const GLfloat* params) {
-	return glad_glPointParameterfv(pname, params);
+	glad_glPointParameterfv(pname, params);
 }
 GLAPI void glPointParameteri(GLenum pname, GLint param) {
-	return glad_glPointParameteri(pname, param);
+	glad_glPointParameteri(pname, param);
 }
 GLAPI void glPointParameteriv(GLenum pname, const GLint* params) {
-	return glad_glPointParameteriv(pname, params);
+	glad_glPointParameteriv(pname, params);
 }
 GLAPI void glBlendColor(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha) {
-	return glad_glBlendColor(red, green, blue, alpha);
+	glad_glBlendColor(red, green, blue, alpha);
 }
 GLAPI void glBlendEquation(GLenum mode) {
-	return glad_glBlendEquation(mode);
+	glad_glBlendEquation(mode);
 }
 
 GLAPI void glGenQueries(GLsizei n, GLuint* ids) {
-	return glad_glGenQueries(n, ids);
+	glad_glGenQueries(n, ids);
 }
 GLAPI void glDeleteQueries(GLsizei n, const GLuint* ids) {
-	return glad_glDeleteQueries(n, ids);
+	glad_glDeleteQueries(n, ids);
 }
 GLAPI GLboolean glIsQuery(GLuint id) {
 	return glad_glIsQuery(id);
 }
 GLAPI void glBeginQuery(GLenum target, GLuint id) {
-	return glad_glBeginQuery(target, id);
+	glad_glBeginQuery(target, id);
 }
 GLAPI void glEndQuery(GLenum target) {
-	return glad_glEndQuery(target);
+	glad_glEndQuery(target);
 }
 GLAPI void glGetQueryiv(GLenum target, GLenum pname, GLint* params) {
-	return glad_glGetQueryiv(target, pname, params);
+	glad_glGetQueryiv(target, pname, params);
 }
 GLAPI void glGetQueryObjectiv(GLuint id, GLenum pname, GLint* params) {
-	return glad_glGetQueryObjectiv(id, pname, params);
+	glad_glGetQueryObjectiv(id, pname, params);
 }
 GLAPI void glGetQueryObjectuiv(GLuint id, GLenum pname, GLuint* params) {
-	return glad_glGetQueryObjectuiv(id, pname, params);
+	glad_glGetQueryObjectuiv(id, pname, params);
 }
 GLAPI void glBindBuffer(GLenum target, GLuint buffer) {
-	return glad_glBindBuffer(target, buffer);
+	glad_glBindBuffer(target, buffer);
 }
 GLAPI void glDeleteBuffers(GLsizei n, const GLuint* buffers) {
-	return glad_glDeleteBuffers(n, buffers);
+	glad_glDeleteBuffers(n, buffers);
 }
 GLAPI void glGenBuffers(GLsizei n, GLuint* buffers) {
-	return glad_glGenBuffers(n, buffers);
+	glad_glGenBuffers(n, buffers);
 }
 GLAPI GLboolean glIsBuffer(GLuint buffer) {
 	return glad_glIsBuffer(buffer);
 }
 GLAPI void glBufferData(GLenum target, GLsizeiptr size, const void* data, GLenum usage) {
-	return glad_glBufferData(target, size, data, usage);
+	glad_glBufferData(target, size, data, usage);
 }
 GLAPI void glBufferSubData(GLenum target, GLintptr offset, GLsizeiptr size, const void* data) {
-	return glad_glBufferSubData(target, offset, size, data);
+	glad_glBufferSubData(target, offset, size, data);
 }
 GLAPI void glGetBufferSubData(GLenum target, GLintptr offset, GLsizeiptr size, void* data) {
-	return glad_glGetBufferSubData(target, offset, size, data);
+	glad_glGetBufferSubData(target, offset, size, data);
 }
 GLAPI void* glMapBuffer(GLenum target, GLenum access) {
 	return glad_glMapBuffer(target, access);
@@ -1448,35 +1448,35 @@ GLAPI GLboolean glUnmapBuffer(GLenum target) {
 	return glad_glUnmapBuffer(target);
 }
 GLAPI void glGetBufferParameteriv(GLenum target, GLenum pname, GLint* params) {
-	return glad_glGetBufferParameteriv(target, pname, params);
+	glad_glGetBufferParameteriv(target, pname, params);
 }
 GLAPI void glGetBufferPointerv(GLenum target, GLenum pname, void** params) {
-	return glad_glGetBufferPointerv(target, pname, params);
+	glad_glGetBufferPointerv(target, pname, params);
 }
 
 GLAPI void glBlendEquationSeparate(GLenum modeRGB, GLenum modeAlpha) {
-	return glad_glBlendEquationSeparate(modeRGB, modeAlpha);
+	glad_glBlendEquationSeparate(modeRGB, modeAlpha);
 }
 GLAPI void glDrawBuffers(GLsizei n, const GLenum* bufs) {
-	return glad_glDrawBuffers(n, bufs);
+	glad_glDrawBuffers(n, bufs);
 }
 GLAPI void glStencilOpSeparate(GLenum face, GLenum sfail, GLenum dpfail, GLenum dppass) {
-	return glad_glStencilOpSeparate(face, sfail, dpfail, dppass);
+	glad_glStencilOpSeparate(face, sfail, dpfail, dppass);
 }
 GLAPI void glStencilFuncSeparate(GLenum face, GLenum func, GLint ref, GLuint mask) {
-	return glad_glStencilFuncSeparate(face, func, ref, mask);
+	glad_glStencilFuncSeparate(face, func, ref, mask);
 }
 GLAPI void glStencilMaskSeparate(GLenum face, GLuint mask) {
-	return glad_glStencilMaskSeparate(face, mask);
+	glad_glStencilMaskSeparate(face, mask);
 }
 GLAPI void glAttachShader(GLuint program, GLuint shader) {
-	return glad_glAttachShader(program, shader);
+	glad_glAttachShader(program, shader);
 }
 GLAPI void glBindAttribLocation(GLuint program, GLuint index, const GLchar* name) {
-	return glad_glBindAttribLocation(program, index, name);
+	glad_glBindAttribLocation(program, index, name);
 }
 GLAPI void glCompileShader(GLuint shader) {
-	return glad_glCompileShader(shader);
+	glad_glCompileShader(shader);
 }
 GLAPI GLuint glCreateProgram() {
 	return glad_glCreateProgram();
@@ -1485,67 +1485,67 @@ GLAPI GLuint glCreateShader(GLenum type) {
 	return glad_glCreateShader(type);
 }
 GLAPI void glDeleteProgram(GLuint program) {
-	return glad_glDeleteProgram(program);
+	glad_glDeleteProgram(program);
 }
 GLAPI void glDeleteShader(GLuint shader) {
-	return glad_glDeleteShader(shader);
+	glad_glDeleteShader(shader);
 }
 GLAPI void glDetachShader(GLuint program, GLuint shader) {
-	return glad_glDetachShader(program, shader);
+	glad_glDetachShader(program, shader);
 }
 GLAPI void glDisableVertexAttribArray(GLuint index) {
-	return glad_glDisableVertexAttribArray(index);
+	glad_glDisableVertexAttribArray(index);
 }
 GLAPI void glEnableVertexAttribArray(GLuint index) {
-	return glad_glEnableVertexAttribArray(index);
+	glad_glEnableVertexAttribArray(index);
 }
 GLAPI void glGetActiveAttrib(GLuint program, GLuint index, GLsizei bufSize, GLsizei* length, GLint* size, GLenum* type, GLchar* name) {
-	return glad_glGetActiveAttrib(program, index, bufSize, length, size, type, name);
+	glad_glGetActiveAttrib(program, index, bufSize, length, size, type, name);
 }
 GLAPI void glGetActiveUniform(GLuint program, GLuint index, GLsizei bufSize, GLsizei* length, GLint* size, GLenum* type, GLchar* name) {
-	return glad_glGetActiveUniform(program, index, bufSize, length, size, type, name);;
+	glad_glGetActiveUniform(program, index, bufSize, length, size, type, name);;
 }
 GLAPI void glGetAttachedShaders(GLuint program, GLsizei maxCount, GLsizei* count, GLuint* shaders) {
-	return glad_glGetAttachedShaders(program, maxCount, count, shaders);
+	glad_glGetAttachedShaders(program, maxCount, count, shaders);
 }
 GLAPI GLint glGetAttribLocation(GLuint program, const GLchar* name) {
 	return glad_glGetAttribLocation(program, name);
 }
 GLAPI void glGetProgramiv(GLuint program, GLenum pname, GLint* params) {
-	return glad_glGetProgramiv(program, pname, params);
+	glad_glGetProgramiv(program, pname, params);
 }
 GLAPI void glGetProgramInfoLog(GLuint program, GLsizei bufSize, GLsizei* length, GLchar* infoLog) {
-	return glad_glGetProgramInfoLog(program, bufSize, length, infoLog);
+	glad_glGetProgramInfoLog(program, bufSize, length, infoLog);
 }
 GLAPI void glGetShaderiv(GLuint shader, GLenum pname, GLint* params) {
-	return glad_glGetShaderiv(shader, pname, params);
+	glad_glGetShaderiv(shader, pname, params);
 }
 GLAPI void glGetShaderInfoLog(GLuint shader, GLsizei bufSize, GLsizei* length, GLchar* infoLog) {
-	return glad_glGetShaderInfoLog(shader, bufSize, length, infoLog);
+	glad_glGetShaderInfoLog(shader, bufSize, length, infoLog);
 }
 GLAPI void glGetShaderSource(GLuint shader, GLsizei bufSize, GLsizei* length, GLchar* source) {
-	return glad_glGetShaderSource(shader, bufSize, length, source);
+	glad_glGetShaderSource(shader, bufSize, length, source);
 }
 GLAPI GLint glGetUniformLocation(GLuint program, const GLchar* name) {
 	return glad_glGetUniformLocation(program, name);
 }
 GLAPI void glGetUniformfv(GLuint program, GLint location, GLfloat* params) {
-	return glad_glGetUniformfv(program, location, params);
+	glad_glGetUniformfv(program, location, params);
 }
 GLAPI void glGetUniformiv(GLuint program, GLint location, GLint* params) {
-	return glad_glGetUniformiv(program, location, params);
+	glad_glGetUniformiv(program, location, params);
 }
 GLAPI void glGetVertexAttribdv(GLuint index, GLenum pname, GLdouble* params) {
-	return glad_glGetVertexAttribdv(index, pname, params);
+	glad_glGetVertexAttribdv(index, pname, params);
 }
 GLAPI void glGetVertexAttribfv(GLuint index, GLenum pname, GLfloat* params) {
-	return glad_glGetVertexAttribfv(index, pname, params);
+	glad_glGetVertexAttribfv(index, pname, params);
 }
 GLAPI void glGetVertexAttribiv(GLuint index, GLenum pname, GLint* params) {
-	return glad_glGetVertexAttribiv(index, pname, params);
+	glad_glGetVertexAttribiv(index, pname, params);
 }
 GLAPI void glGetVertexAttribPointerv(GLuint index, GLenum pname, void** pointer) {
-	return glad_glGetVertexAttribPointerv(index, pname, pointer);
+	glad_glGetVertexAttribPointerv(index, pname, pointer);
 }
 GLAPI GLboolean glIsProgram(GLuint program) {
 	return glad_glIsProgram(program);
@@ -1554,375 +1554,375 @@ GLAPI GLboolean glIsShader(GLuint shader) {
 	return glad_glIsShader(shader);
 }
 GLAPI void glLinkProgram(GLuint program) {
-	return glad_glLinkProgram(program);
+	glad_glLinkProgram(program);
 }
 GLAPI void glShaderSource(GLuint shader, GLsizei count, const GLchar* const* string, const GLint* length) {
-	return glad_glShaderSource(shader, count, string, length);
+	glad_glShaderSource(shader, count, string, length);
 }
 GLAPI void glUseProgram(GLuint program) {
-	return glad_glUseProgram(program);
+	glad_glUseProgram(program);
 }
 GLAPI void glUniform1f(GLint location, GLfloat v0) {
-	return glad_glUniform1f(location, v0);
+	glad_glUniform1f(location, v0);
 }
 GLAPI void glUniform2f(GLint location, GLfloat v0, GLfloat v1) {
-	return glad_glUniform2f(location, v0, v1);
+	glad_glUniform2f(location, v0, v1);
 }
 GLAPI void glUniform3f(GLint location, GLfloat v0, GLfloat v1, GLfloat v2) {
-	return glad_glUniform3f(location, v0, v1, v2);
+	glad_glUniform3f(location, v0, v1, v2);
 }
 GLAPI void glUniform4f(GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3) {
-	return glad_glUniform4f(location, v0, v1, v2, v3);
+	glad_glUniform4f(location, v0, v1, v2, v3);
 }
 GLAPI void glUniform1i(GLint location, GLint v0) {
-	return glad_glUniform1i(location, v0);
+	glad_glUniform1i(location, v0);
 }
 GLAPI void glUniform2i(GLint location, GLint v0, GLint v1) {
-	return glad_glUniform2i(location, v0, v1);
+	glad_glUniform2i(location, v0, v1);
 }
 GLAPI void glUniform3i(GLint location, GLint v0, GLint v1, GLint v2) {
-	return glad_glUniform3i(location, v0, v1, v2);
+	glad_glUniform3i(location, v0, v1, v2);
 }
 GLAPI void glUniform4i(GLint location, GLint v0, GLint v1, GLint v2, GLint v3) {
-	return glad_glUniform4i(location, v0, v1, v2, v3);
+	glad_glUniform4i(location, v0, v1, v2, v3);
 }
 GLAPI void glUniform1fv(GLint location, GLsizei count, const GLfloat* value) {
-	return glad_glUniform1fv(location, count, value);
+	glad_glUniform1fv(location, count, value);
 }
 GLAPI void glUniform2fv(GLint location, GLsizei count, const GLfloat* value) {
-	return glad_glUniform2fv(location, count, value);
+	glad_glUniform2fv(location, count, value);
 }
 GLAPI void glUniform3fv(GLint location, GLsizei count, const GLfloat* value) {
-	return glad_glUniform3fv(location, count, value);
+	glad_glUniform3fv(location, count, value);
 }
 GLAPI void glUniform4fv(GLint location, GLsizei count, const GLfloat* value) {
-	return glad_glUniform4fv(location, count, value);
+	glad_glUniform4fv(location, count, value);
 }
 GLAPI void glUniform1iv(GLint location, GLsizei count, const GLint* value) {
-	return glad_glUniform1iv(location, count, value);
+	glad_glUniform1iv(location, count, value);
 }
 GLAPI void glUniform2iv(GLint location, GLsizei count, const GLint* value) {
-	return glad_glUniform2iv(location, count, value);
+	glad_glUniform2iv(location, count, value);
 }
 GLAPI void glUniform3iv(GLint location, GLsizei count, const GLint* value) {
-	return glad_glUniform3iv(location, count, value);
+	glad_glUniform3iv(location, count, value);
 }
 GLAPI void glUniform4iv(GLint location, GLsizei count, const GLint* value) {
-	return glad_glUniform4iv(location, count, value);
+	glad_glUniform4iv(location, count, value);
 }
 GLAPI void glUniformMatrix2fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat* value) {
-	return glad_glUniformMatrix2fv(location, count, transpose, value);
+	glad_glUniformMatrix2fv(location, count, transpose, value);
 }
 GLAPI void glUniformMatrix3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat* value) {
-	return glad_glUniformMatrix3fv(location, count, transpose, value);
+	glad_glUniformMatrix3fv(location, count, transpose, value);
 }
 GLAPI void glUniformMatrix4fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat* value) {
-	return glad_glUniformMatrix4fv(location, count, transpose, value);
+	glad_glUniformMatrix4fv(location, count, transpose, value);
 }
 GLAPI void glValidateProgram(GLuint program) {
-	return glad_glValidateProgram(program);
+	glad_glValidateProgram(program);
 }
 GLAPI void glVertexAttrib1d(GLuint index, GLdouble x) {
-	return glad_glVertexAttrib1d(index, x);
+	glad_glVertexAttrib1d(index, x);
 }
 GLAPI void glVertexAttrib1dv(GLuint index, const GLdouble* v) {
-	return glad_glVertexAttrib1dv(index, v);
+	glad_glVertexAttrib1dv(index, v);
 }
 GLAPI void glVertexAttrib1f(GLuint index, GLfloat x) {
-	return glad_glVertexAttrib1f(index, x);
+	glad_glVertexAttrib1f(index, x);
 }
 GLAPI void glVertexAttrib1fv(GLuint index, const GLfloat* v) {
-	return glad_glVertexAttrib1fv(index, v);
+	glad_glVertexAttrib1fv(index, v);
 }
 GLAPI void glVertexAttrib1s(GLuint index, GLshort x) {
-	return glad_glVertexAttrib1s(index, x);
+	glad_glVertexAttrib1s(index, x);
 }
 GLAPI void glVertexAttrib1sv(GLuint index, const GLshort* v) {
-	return glad_glVertexAttrib1sv(index, v);
+	glad_glVertexAttrib1sv(index, v);
 }
 GLAPI void glVertexAttrib2d(GLuint index, GLdouble x, GLdouble y) {
-	return glad_glVertexAttrib2d(index, x, y);
+	glad_glVertexAttrib2d(index, x, y);
 }
 GLAPI void glVertexAttrib2dv(GLuint index, const GLdouble* v) {
-	return glad_glVertexAttrib2dv(index, v);
+	glad_glVertexAttrib2dv(index, v);
 }
 GLAPI void glVertexAttrib2f(GLuint index, GLfloat x, GLfloat y) {
-	return glad_glVertexAttrib2f(index, x, y);
+	glad_glVertexAttrib2f(index, x, y);
 }
 GLAPI void glVertexAttrib2fv(GLuint index, const GLfloat* v) {
-	return glad_glVertexAttrib2fv(index, v);
+	glad_glVertexAttrib2fv(index, v);
 }
 GLAPI void glVertexAttrib2s(GLuint index, GLshort x, GLshort y) {
-	return glad_glVertexAttrib2s(index, x, y);
+	glad_glVertexAttrib2s(index, x, y);
 }
 GLAPI void glVertexAttrib2sv(GLuint index, const GLshort* v) {
-	return glad_glVertexAttrib2sv(index, v);
+	glad_glVertexAttrib2sv(index, v);
 }
 GLAPI void glVertexAttrib3d(GLuint index, GLdouble x, GLdouble y, GLdouble z) {
-	return glad_glVertexAttrib3d(index, x, y, z);
+	glad_glVertexAttrib3d(index, x, y, z);
 }
 GLAPI void glVertexAttrib3dv(GLuint index, const GLdouble* v) {
-	return glad_glVertexAttrib3dv(index, v);
+	glad_glVertexAttrib3dv(index, v);
 }
 GLAPI void glVertexAttrib3f(GLuint index, GLfloat x, GLfloat y, GLfloat z) {
-	return glad_glVertexAttrib3f(index, x, y, z);
+	glad_glVertexAttrib3f(index, x, y, z);
 }
 GLAPI void glVertexAttrib3fv(GLuint index, const GLfloat* v) {
-	return glad_glVertexAttrib3fv(index, v);
+	glad_glVertexAttrib3fv(index, v);
 }
 GLAPI void glVertexAttrib3s(GLuint index, GLshort x, GLshort y, GLshort z) {
-	return glad_glVertexAttrib3s(index, x, y, z);
+	glad_glVertexAttrib3s(index, x, y, z);
 }
 GLAPI void glVertexAttrib3sv(GLuint index, const GLshort* v) {
-	return glad_glVertexAttrib3sv(index, v);
+	glad_glVertexAttrib3sv(index, v);
 }
 GLAPI void glVertexAttrib4Nbv(GLuint index, const GLbyte* v) {
-	return glad_glVertexAttrib4Nbv(index, v);
+	glad_glVertexAttrib4Nbv(index, v);
 }
 GLAPI void glVertexAttrib4Niv(GLuint index, const GLint* v) {
-	return glad_glVertexAttrib4Niv(index, v);
+	glad_glVertexAttrib4Niv(index, v);
 }
 GLAPI void glVertexAttrib4Nsv(GLuint index, const GLshort* v) {
-	return glad_glVertexAttrib4Nsv(index, v);
+	glad_glVertexAttrib4Nsv(index, v);
 }
 GLAPI void glVertexAttrib4Nub(GLuint index, GLubyte x, GLubyte y, GLubyte z, GLubyte w) {
-	return glad_glVertexAttrib4Nub(index, x, y, z, w);
+	glad_glVertexAttrib4Nub(index, x, y, z, w);
 }
 GLAPI void glVertexAttrib4Nubv(GLuint index, const GLubyte* v) {
-	return glad_glVertexAttrib4Nubv(index, v);
+	glad_glVertexAttrib4Nubv(index, v);
 }
 GLAPI void glVertexAttrib4Nuiv(GLuint index, const GLuint* v) {
-	return glad_glVertexAttrib4Nuiv(index, v);
+	glad_glVertexAttrib4Nuiv(index, v);
 }
 GLAPI void glVertexAttrib4Nusv(GLuint index, const GLushort* v) {
-	return glad_glVertexAttrib4Nusv(index, v);
+	glad_glVertexAttrib4Nusv(index, v);
 }
 GLAPI void glVertexAttrib4bv(GLuint index, const GLbyte* v) {
-	return glad_glVertexAttrib4bv(index, v);
+	glad_glVertexAttrib4bv(index, v);
 }
 GLAPI void glVertexAttrib4d(GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w) {
-	return glad_glVertexAttrib4d(index, x, y, z, w);
+	glad_glVertexAttrib4d(index, x, y, z, w);
 }
 GLAPI void glVertexAttrib4dv(GLuint index, const GLdouble* v) {
-	return glad_glVertexAttrib4dv(index, v);
+	glad_glVertexAttrib4dv(index, v);
 }
 GLAPI void glVertexAttrib4f(GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w) {
-	return glad_glVertexAttrib4f(index, x, y, z, w);
+	glad_glVertexAttrib4f(index, x, y, z, w);
 }
 GLAPI void glVertexAttrib4fv(GLuint index, const GLfloat* v) {
-	return glad_glVertexAttrib4fv(index, v);
+	glad_glVertexAttrib4fv(index, v);
 }
 GLAPI void glVertexAttrib4iv(GLuint index, const GLint* v) {
-	return glad_glVertexAttrib4iv(index, v);
+	glad_glVertexAttrib4iv(index, v);
 }
 GLAPI void glVertexAttrib4s(GLuint index, GLshort x, GLshort y, GLshort z, GLshort w) {
-	return glad_glVertexAttrib4s(index, x, y, z, w);
+	glad_glVertexAttrib4s(index, x, y, z, w);
 }
 GLAPI void glVertexAttrib4sv(GLuint index, const GLshort* v) {
-	return glad_glVertexAttrib4sv(index, v);
+	glad_glVertexAttrib4sv(index, v);
 }
 GLAPI void glVertexAttrib4ubv(GLuint index, const GLubyte* v) {
-	return glad_glVertexAttrib4ubv(index, v);
+	glad_glVertexAttrib4ubv(index, v);
 }
 GLAPI void glVertexAttrib4uiv(GLuint index, const GLuint* v) {
-	return glad_glVertexAttrib4uiv(index, v);
+	glad_glVertexAttrib4uiv(index, v);
 }
 GLAPI void glVertexAttrib4usv(GLuint index, const GLushort* v) {
-	return glad_glVertexAttrib4usv(index, v);
+	glad_glVertexAttrib4usv(index, v);
 }
 GLAPI void glVertexAttribPointer(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void* pointer) {
-	return glad_glVertexAttribPointer(index, size, type, normalized, stride, pointer);
+	glad_glVertexAttribPointer(index, size, type, normalized, stride, pointer);
 }
 
 GLAPI void glUniformMatrix2x3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat* value) {
-	return glad_glUniformMatrix2x3fv(location, count, transpose, value);
+	glad_glUniformMatrix2x3fv(location, count, transpose, value);
 }
 GLAPI void glUniformMatrix3x2fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat* value) {
-	return glad_glUniformMatrix3x2fv(location, count, transpose, value);
+	glad_glUniformMatrix3x2fv(location, count, transpose, value);
 }
 GLAPI void glUniformMatrix2x4fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat* value) {
-	return glad_glUniformMatrix2x4fv(location, count, transpose, value);
+	glad_glUniformMatrix2x4fv(location, count, transpose, value);
 }
 GLAPI void glUniformMatrix4x2fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat* value) {
-	return glad_glUniformMatrix4x2fv(location, count, transpose, value);
+	glad_glUniformMatrix4x2fv(location, count, transpose, value);
 }
 GLAPI void glUniformMatrix3x4fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat* value) {
-	return glad_glUniformMatrix3x4fv(location, count, transpose, value);
+	glad_glUniformMatrix3x4fv(location, count, transpose, value);
 }
 GLAPI void glUniformMatrix4x3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat* value) {
-	return glad_glUniformMatrix4x3fv(location, count, transpose, value);
+	glad_glUniformMatrix4x3fv(location, count, transpose, value);
 }
 
 GLAPI void glColorMaski(GLuint index, GLboolean r, GLboolean g, GLboolean b, GLboolean a) {
-	return glad_glColorMaski(index, r, g, b, a);
+	glad_glColorMaski(index, r, g, b, a);
 }
 GLAPI void glGetBooleani_v(GLenum target, GLuint index, GLboolean* data) {
-	return glad_glGetBooleani_v(target, index, data);
+	glad_glGetBooleani_v(target, index, data);
 }
 GLAPI void glGetIntegeri_v(GLenum target, GLuint index, GLint* data) {
-	return glad_glGetIntegeri_v(target, index, data);
+	glad_glGetIntegeri_v(target, index, data);
 }
 GLAPI void glEnablei(GLenum target, GLuint index) {
-	return glad_glEnablei(target, index);
+	glad_glEnablei(target, index);
 }
 GLAPI void glDisablei(GLenum target, GLuint index) {
-	return glad_glDisablei(target, index);
+	glad_glDisablei(target, index);
 }
 GLAPI GLboolean glIsEnabledi(GLenum target, GLuint index) {
 	return glad_glIsEnabledi(target, index);
 }
 GLAPI void glBeginTransformFeedback(GLenum primitiveMode) {
-	return glad_glBeginTransformFeedback(primitiveMode);
+	glad_glBeginTransformFeedback(primitiveMode);
 }
 GLAPI void glEndTransformFeedback() {
-	return glad_glEndTransformFeedback();
+	glad_glEndTransformFeedback();
 }
 GLAPI void glBindBufferRange(GLenum target, GLuint index, GLuint buffer, GLintptr offset, GLsizeiptr size) {
-	return glad_glBindBufferRange(target, index, buffer, offset, size);
+	glad_glBindBufferRange(target, index, buffer, offset, size);
 }
 GLAPI void glBindBufferBase(GLenum target, GLuint index, GLuint buffer) {
-	return glad_glBindBufferBase(target, index, buffer);
+	glad_glBindBufferBase(target, index, buffer);
 }
 GLAPI void glTransformFeedbackVaryings(GLuint program, GLsizei count, const GLchar* const* varyings, GLenum bufferMode) {
-	return glad_glTransformFeedbackVaryings(program, count, varyings, bufferMode);
+	glad_glTransformFeedbackVaryings(program, count, varyings, bufferMode);
 }
 GLAPI void glGetTransformFeedbackVarying(GLuint program, GLuint index, GLsizei bufSize, GLsizei* length, GLsizei* size, GLenum* type, GLchar* name) {
-	return glad_glGetTransformFeedbackVarying(program, index, bufSize, length, size, type, name);
+	glad_glGetTransformFeedbackVarying(program, index, bufSize, length, size, type, name);
 }
 GLAPI void glClampColor(GLenum target, GLenum clamp) {
-	return glad_glClampColor(target, clamp);
+	glad_glClampColor(target, clamp);
 }
 GLAPI void glBeginConditionalRender(GLuint id, GLenum mode) {
-	return glad_glBeginConditionalRender(id, mode);
+	glad_glBeginConditionalRender(id, mode);
 }
 GLAPI void glEndConditionalRender() {
-	return glad_glEndConditionalRender();
+	glad_glEndConditionalRender();
 }
 GLAPI void glVertexAttribIPointer(GLuint index, GLint size, GLenum type, GLsizei stride, const void* pointer) {
-	return glad_glVertexAttribIPointer(index, size, type, stride, pointer);
+	glad_glVertexAttribIPointer(index, size, type, stride, pointer);
 }
 GLAPI void glGetVertexAttribIiv(GLuint index, GLenum pname, GLint* params) {
-	return glad_glGetVertexAttribIiv(index, pname, params);
+	glad_glGetVertexAttribIiv(index, pname, params);
 }
 GLAPI void glGetVertexAttribIuiv(GLuint index, GLenum pname, GLuint* params) {
-	return glad_glGetVertexAttribIuiv(index, pname, params);
+	glad_glGetVertexAttribIuiv(index, pname, params);
 }
 GLAPI void glVertexAttribI1i(GLuint index, GLint x) {
-	return glad_glVertexAttribI1i(index, x);
+	glad_glVertexAttribI1i(index, x);
 }
 GLAPI void glVertexAttribI2i(GLuint index, GLint x, GLint y) {
-	return glad_glVertexAttribI2i(index, x, y);
+	glad_glVertexAttribI2i(index, x, y);
 }
 GLAPI void glVertexAttribI3i(GLuint index, GLint x, GLint y, GLint z) {
-	return glad_glVertexAttribI3i(index, x, y, z);
+	glad_glVertexAttribI3i(index, x, y, z);
 }
 GLAPI void glVertexAttribI4i(GLuint index, GLint x, GLint y, GLint z, GLint w) {
-	return glad_glVertexAttribI4i(index, x, y, z, w);
+	glad_glVertexAttribI4i(index, x, y, z, w);
 }
 GLAPI void glVertexAttribI1ui(GLuint index, GLuint x) {
-	return glad_glVertexAttribI1ui(index, x);
+	glad_glVertexAttribI1ui(index, x);
 }
 GLAPI void glVertexAttribI2ui(GLuint index, GLuint x, GLuint y) {
-	return glad_glVertexAttribI2ui(index, x, y);
+	glad_glVertexAttribI2ui(index, x, y);
 }
 GLAPI void glVertexAttribI3ui(GLuint index, GLuint x, GLuint y, GLuint z) {
-	return glad_glVertexAttribI3ui(index, x, y, z);
+	glad_glVertexAttribI3ui(index, x, y, z);
 }
 GLAPI void glVertexAttribI4ui(GLuint index, GLuint x, GLuint y, GLuint z, GLuint w) {
-	return glad_glVertexAttribI4ui(index, x, y, z, w);
+	glad_glVertexAttribI4ui(index, x, y, z, w);
 }
 GLAPI void glVertexAttribI1iv(GLuint index, const GLint* v) {
-	return glad_glVertexAttribI1iv(index, v);
+	glad_glVertexAttribI1iv(index, v);
 }
 GLAPI void glVertexAttribI2iv(GLuint index, const GLint* v) {
-	return glad_glVertexAttribI2iv(index, v);
+	glad_glVertexAttribI2iv(index, v);
 }
 GLAPI void glVertexAttribI3iv(GLuint index, const GLint* v) {
-	return glad_glVertexAttribI3iv(index, v);
+	glad_glVertexAttribI3iv(index, v);
 }
 GLAPI void glVertexAttribI4iv(GLuint index, const GLint* v) {
-	return glad_glVertexAttribI4iv(index, v);
+	glad_glVertexAttribI4iv(index, v);
 }
 GLAPI void glVertexAttribI1uiv(GLuint index, const GLuint* v) {
-	return glad_glVertexAttribI1uiv(index, v);
+	glad_glVertexAttribI1uiv(index, v);
 }
 GLAPI void glVertexAttribI2uiv(GLuint index, const GLuint* v) {
-	return glad_glVertexAttribI2uiv(index, v);
+	glad_glVertexAttribI2uiv(index, v);
 }
 GLAPI void glVertexAttribI3uiv(GLuint index, const GLuint* v) {
-	return glad_glVertexAttribI3uiv(index, v);
+	glad_glVertexAttribI3uiv(index, v);
 }
 GLAPI void glVertexAttribI4uiv(GLuint index, const GLuint* v) {
-	return glad_glVertexAttribI4uiv(index, v);
+	glad_glVertexAttribI4uiv(index, v);
 }
 GLAPI void glVertexAttribI4bv(GLuint index, const GLbyte* v) {
-	return glad_glVertexAttribI4bv(index, v);
+	glad_glVertexAttribI4bv(index, v);
 }
 GLAPI void glVertexAttribI4sv(GLuint index, const GLshort* v) {
-	return glad_glVertexAttribI4sv(index, v);
+	glad_glVertexAttribI4sv(index, v);
 }
 GLAPI void glVertexAttribI4ubv(GLuint index, const GLubyte* v) {
-	return glad_glVertexAttribI4ubv(index, v);
+	glad_glVertexAttribI4ubv(index, v);
 }
 GLAPI void glVertexAttribI4usv(GLuint index, const GLushort* v) {
-	return glad_glVertexAttribI4usv(index, v);
+	glad_glVertexAttribI4usv(index, v);
 }
 GLAPI void glGetUniformuiv(GLuint program, GLint location, GLuint* params) {
-	return glad_glGetUniformuiv(program, location, params);
+	glad_glGetUniformuiv(program, location, params);
 }
 GLAPI void glBindFragDataLocation(GLuint program, GLuint color, const GLchar* name) {
-	return glad_glBindFragDataLocation(program, color, name);
+	glad_glBindFragDataLocation(program, color, name);
 }
 GLAPI GLint glGetFragDataLocation(GLuint program, const GLchar* name) {
 	return glad_glGetFragDataLocation(program, name);
 }
 GLAPI void glUniform1ui(GLint location, GLuint v0) {
-	return glad_glUniform1ui(location, v0);
+	glad_glUniform1ui(location, v0);
 }
 GLAPI void glUniform2ui(GLint location, GLuint v0, GLuint v1) {
-	return glad_glUniform2ui(location, v0, v1);
+	glad_glUniform2ui(location, v0, v1);
 }
 GLAPI void glUniform3ui(GLint location, GLuint v0, GLuint v1, GLuint v2) {
-	return glad_glUniform3ui(location, v0, v1, v2);
+	glad_glUniform3ui(location, v0, v1, v2);
 }
 GLAPI void glUniform4ui(GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3) {
-	return glad_glUniform4ui(location, v0, v1, v2, v3);
+	glad_glUniform4ui(location, v0, v1, v2, v3);
 }
 GLAPI void glUniform1uiv(GLint location, GLsizei count, const GLuint* value) {
-	return glad_glUniform1uiv(location, count, value);
+	glad_glUniform1uiv(location, count, value);
 }
 GLAPI void glUniform2uiv(GLint location, GLsizei count, const GLuint* value) {
-	return glad_glUniform2uiv(location, count, value);
+	glad_glUniform2uiv(location, count, value);
 }
 GLAPI void glUniform3uiv(GLint location, GLsizei count, const GLuint* value) {
-	return glad_glUniform3uiv(location, count, value);
+	glad_glUniform3uiv(location, count, value);
 }
 GLAPI void glUniform4uiv(GLint location, GLsizei count, const GLuint* value) {
-	return glad_glUniform4uiv(location, count, value);
+	glad_glUniform4uiv(location, count, value);
 }
 GLAPI void glTexParameterIiv(GLenum target, GLenum pname, const GLint* params) {
-	return glad_glTexParameterIiv(target, pname, params);
+	glad_glTexParameterIiv(target, pname, params);
 }
 GLAPI void glTexParameterIuiv(GLenum target, GLenum pname, const GLuint* params) {
-	return glad_glTexParameterIuiv(target, pname, params);
+	glad_glTexParameterIuiv(target, pname, params);
 }
 GLAPI void glGetTexParameterIiv(GLenum target, GLenum pname, GLint* params) {
-	return glad_glGetTexParameterIiv(target, pname, params);
+	glad_glGetTexParameterIiv(target, pname, params);
 }
 GLAPI void glGetTexParameterIuiv(GLenum target, GLenum pname, GLuint* params) {
-	return glad_glGetTexParameterIuiv(target, pname, params);
+	glad_glGetTexParameterIuiv(target, pname, params);
 }
 GLAPI void glClearBufferiv(GLenum buffer, GLint drawbuffer, const GLint* value) {
-	return glad_glClearBufferiv(buffer, drawbuffer, value);
+	glad_glClearBufferiv(buffer, drawbuffer, value);
 }
 GLAPI void glClearBufferuiv(GLenum buffer, GLint drawbuffer, const GLuint* value) {
-	return glad_glClearBufferuiv(buffer, drawbuffer, value);
+	glad_glClearBufferuiv(buffer, drawbuffer, value);
 }
 GLAPI void glClearBufferfv(GLenum buffer, GLint drawbuffer, const GLfloat* value) {
-	return glad_glClearBufferfv(buffer, drawbuffer, value);
+	glad_glClearBufferfv(buffer, drawbuffer, value);
 }
 GLAPI void glClearBufferfi(GLenum buffer, GLint drawbuffer, GLfloat depth, GLint stencil) {
-	return glad_glClearBufferfi(buffer, drawbuffer, depth, stencil);
+	glad_glClearBufferfi(buffer, drawbuffer, depth, stencil);
 }
 GLAPI const GLubyte* glGetStringi(GLenum name, GLuint index) {
 	return glad_glGetStringi(name, index);
@@ -1931,132 +1931,132 @@ GLAPI GLboolean glIsRenderbuffer(GLuint renderbuffer) {
 	return glad_glIsRenderbuffer(renderbuffer);
 }
 GLAPI void glBindRenderbuffer(GLenum target, GLuint renderbuffer) {
-	return glad_glBindRenderbuffer(target, renderbuffer);
+	glad_glBindRenderbuffer(target, renderbuffer);
 }
 GLAPI void glDeleteRenderbuffers(GLsizei n, const GLuint* renderbuffers) {
-	return glad_glDeleteRenderbuffers(n, renderbuffers);
+	glad_glDeleteRenderbuffers(n, renderbuffers);
 }
 GLAPI void glGenRenderbuffers(GLsizei n, GLuint* renderbuffers) {
-	return glad_glGenRenderbuffers(n, renderbuffers);
+	glad_glGenRenderbuffers(n, renderbuffers);
 }
 GLAPI void glRenderbufferStorage(GLenum target, GLenum internalformat, GLsizei width, GLsizei height) {
-	return glad_glRenderbufferStorage(target, internalformat, width, height);
+	glad_glRenderbufferStorage(target, internalformat, width, height);
 }
 GLAPI void glGetRenderbufferParameteriv(GLenum target, GLenum pname, GLint* params) {
-	return glad_glGetRenderbufferParameteriv(target, pname, params);
+	glad_glGetRenderbufferParameteriv(target, pname, params);
 }
 GLAPI GLboolean glIsFramebuffer(GLuint framebuffer) {
 	return glad_glIsFramebuffer(framebuffer);
 }
 GLAPI void glBindFramebuffer(GLenum target, GLuint framebuffer) {
-	return glad_glBindFramebuffer(target, framebuffer);
+	glad_glBindFramebuffer(target, framebuffer);
 }
 GLAPI void glDeleteFramebuffers(GLsizei n, const GLuint* framebuffers) {
-	return glad_glDeleteFramebuffers(n, framebuffers);
+	glad_glDeleteFramebuffers(n, framebuffers);
 }
 GLAPI void glGenFramebuffers(GLsizei n, GLuint* framebuffers) {
-	return glad_glGenFramebuffers(n, framebuffers);
+	glad_glGenFramebuffers(n, framebuffers);
 }
 GLAPI GLenum glCheckFramebufferStatus(GLenum target) {
 	return glad_glCheckFramebufferStatus(target);
 }
 GLAPI void glFramebufferTexture1D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level) {
-	return glad_glFramebufferTexture1D(target, attachment, textarget, texture, level);
+	glad_glFramebufferTexture1D(target, attachment, textarget, texture, level);
 }
 GLAPI void glFramebufferTexture2D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level) {
-	return glad_glFramebufferTexture2D(target, attachment, textarget, texture, level);
+	glad_glFramebufferTexture2D(target, attachment, textarget, texture, level);
 }
 GLAPI void glFramebufferTexture3D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLint zoffset) {
-	return glad_glFramebufferTexture3D(target, attachment, textarget, texture, level, zoffset);
+	glad_glFramebufferTexture3D(target, attachment, textarget, texture, level, zoffset);
 }
 GLAPI void glFramebufferRenderbuffer(GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer) {
-	return glad_glFramebufferRenderbuffer(target, attachment, renderbuffertarget, renderbuffer);
+	glad_glFramebufferRenderbuffer(target, attachment, renderbuffertarget, renderbuffer);
 }
 GLAPI void glGetFramebufferAttachmentParameteriv(GLenum target, GLenum attachment, GLenum pname, GLint* params) {
-	return glad_glGetFramebufferAttachmentParameteriv(target, attachment, pname, params);
+	glad_glGetFramebufferAttachmentParameteriv(target, attachment, pname, params);
 }
 GLAPI void glGenerateMipmap(GLenum target) {
-	return glad_glGenerateMipmap(target);
+	glad_glGenerateMipmap(target);
 }
 GLAPI void glBlitFramebuffer(GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter) {
-	return glad_glBlitFramebuffer(srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, mask, filter);
+	glad_glBlitFramebuffer(srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, mask, filter);
 }
 GLAPI void glRenderbufferStorageMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height) {
-	return glad_glRenderbufferStorageMultisample(target, samples, internalformat, width, height);
+	glad_glRenderbufferStorageMultisample(target, samples, internalformat, width, height);
 }
 GLAPI void glFramebufferTextureLayer(GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer) {
-	return glad_glFramebufferTextureLayer(target, attachment, texture, level, layer);
+	glad_glFramebufferTextureLayer(target, attachment, texture, level, layer);
 }
 GLAPI void* glMapBufferRange(GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access) {
 	return glad_glMapBufferRange(target, offset, length, access);
 }
 GLAPI void glFlushMappedBufferRange(GLenum target, GLintptr offset, GLsizeiptr length) {
-	return glad_glFlushMappedBufferRange(target, offset, length);
+	glad_glFlushMappedBufferRange(target, offset, length);
 }
 GLAPI void glBindVertexArray(GLuint array) {
-	return glad_glBindVertexArray(array);
+	glad_glBindVertexArray(array);
 }
 GLAPI void glDeleteVertexArrays(GLsizei n, const GLuint* arrays) {
-	return glad_glDeleteVertexArrays(n, arrays);
+	glad_glDeleteVertexArrays(n, arrays);
 }
 GLAPI void glGenVertexArrays(GLsizei n, GLuint* arrays) {
-	return glad_glGenVertexArrays(n, arrays);
+	glad_glGenVertexArrays(n, arrays);
 }
 GLAPI GLboolean glIsVertexArray(GLuint array) {
 	return glad_glIsVertexArray(array);
 }
 
 GLAPI void glDrawArraysInstanced(GLenum mode, GLint first, GLsizei count, GLsizei instancecount) {
-	return glad_glDrawArraysInstanced(mode, first, count, instancecount);
+	glad_glDrawArraysInstanced(mode, first, count, instancecount);
 }
 GLAPI void glDrawElementsInstanced(GLenum mode, GLsizei count, GLenum type, const void* indices, GLsizei instancecount) {
-	return glad_glDrawElementsInstanced(mode, count, type, indices, instancecount);
+	glad_glDrawElementsInstanced(mode, count, type, indices, instancecount);
 }
 GLAPI void glTexBuffer(GLenum target, GLenum internalformat, GLuint buffer) {
-	return glad_glTexBuffer(target, internalformat, buffer);
+	glad_glTexBuffer(target, internalformat, buffer);
 }
 GLAPI void glPrimitiveRestartIndex(GLuint index) {
-	return glad_glPrimitiveRestartIndex(index);
+	glad_glPrimitiveRestartIndex(index);
 }
 GLAPI void glCopyBufferSubData(GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size) {
-	return glad_glCopyBufferSubData(readTarget, writeTarget, readOffset, writeOffset, size);
+	glad_glCopyBufferSubData(readTarget, writeTarget, readOffset, writeOffset, size);
 }
 GLAPI void glGetUniformIndices(GLuint program, GLsizei uniformCount, const GLchar* const* uniformNames, GLuint* uniformIndices) {
-	return glad_glGetUniformIndices(program, uniformCount, uniformNames, uniformIndices);
+	glad_glGetUniformIndices(program, uniformCount, uniformNames, uniformIndices);
 }
 GLAPI void glGetActiveUniformsiv(GLuint program, GLsizei uniformCount, const GLuint* uniformIndices, GLenum pname, GLint* params) {
-	return glad_glGetActiveUniformsiv(program, uniformCount, uniformIndices, pname, params);
+	glad_glGetActiveUniformsiv(program, uniformCount, uniformIndices, pname, params);
 }
 GLAPI void glGetActiveUniformName(GLuint program, GLuint uniformIndex, GLsizei bufSize, GLsizei* length, GLchar* uniformName) {
-	return glad_glGetActiveUniformName(program, uniformIndex, bufSize, length, uniformName);
+	glad_glGetActiveUniformName(program, uniformIndex, bufSize, length, uniformName);
 }
 GLAPI GLuint glGetUniformBlockIndex(GLuint program, const GLchar* uniformBlockName) {
 	return glad_glGetUniformBlockIndex(program, uniformBlockName);
 }
 GLAPI void glGetActiveUniformBlockiv(GLuint program, GLuint uniformBlockIndex, GLenum pname, GLint* params) {
-	return glad_glGetActiveUniformBlockiv(program, uniformBlockIndex, pname, params);
+	glad_glGetActiveUniformBlockiv(program, uniformBlockIndex, pname, params);
 }
 GLAPI void glGetActiveUniformBlockName(GLuint program, GLuint uniformBlockIndex, GLsizei bufSize, GLsizei* length, GLchar* uniformBlockName) {
-	return glad_glGetActiveUniformBlockName(program, uniformBlockIndex, bufSize, length, uniformBlockName);
+	glad_glGetActiveUniformBlockName(program, uniformBlockIndex, bufSize, length, uniformBlockName);
 }
 GLAPI void glUniformBlockBinding(GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding) {
-	return glad_glUniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding);
+	glad_glUniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding);
 }
 
 GLAPI void glDrawElementsBaseVertex(GLenum mode, GLsizei count, GLenum type, const void* indices, GLint basevertex) {
-	return glad_glDrawElementsBaseVertex(mode, count, type, indices, basevertex);
+	glad_glDrawElementsBaseVertex(mode, count, type, indices, basevertex);
 }
 GLAPI void glDrawRangeElementsBaseVertex(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const void* indices, GLint basevertex) {
-	return glad_glDrawRangeElementsBaseVertex(mode, start, end, count, type, indices, basevertex);
+	glad_glDrawRangeElementsBaseVertex(mode, start, end, count, type, indices, basevertex);
 }
 GLAPI void glDrawElementsInstancedBaseVertex(GLenum mode, GLsizei count, GLenum type, const void* indices, GLsizei instancecount, GLint basevertex) {
-	return glad_glDrawElementsInstancedBaseVertex(mode, count, type, indices, instancecount, basevertex);
+	glad_glDrawElementsInstancedBaseVertex(mode, count, type, indices, instancecount, basevertex);
 }
 GLAPI void glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei* count, GLenum type, const void* const* indices, GLsizei drawcount, const GLint* basevertex) {
-	return glad_glMultiDrawElementsBaseVertex(mode, count, type, indices, drawcount, basevertex);
+	glad_glMultiDrawElementsBaseVertex(mode, count, type, indices, drawcount, basevertex);
 }
 GLAPI void glProvokingVertex(GLenum mode) {
-	return glad_glProvokingVertex(mode);
+	glad_glProvokingVertex(mode);
 }
 GLAPI GLsync glFenceSync(GLenum condition, GLbitfield flags) {
 	return glad_glFenceSync(condition, flags);
@@ -2065,214 +2065,214 @@ GLAPI GLboolean glIsSync(GLsync sync) {
 	return glad_glIsSync(sync);
 }
 GLAPI void glDeleteSync(GLsync sync) {
-	return glad_glDeleteSync(sync);
+	glad_glDeleteSync(sync);
 }
 GLAPI GLenum glClientWaitSync(GLsync sync, GLbitfield flags, GLuint64 timeout) {
 	return glad_glClientWaitSync(sync, flags, timeout);
 }
 GLAPI void glWaitSync(GLsync sync, GLbitfield flags, GLuint64 timeout) {
-	return glad_glWaitSync(sync, flags, timeout);
+	glad_glWaitSync(sync, flags, timeout);
 }
 GLAPI void glGetInteger64v(GLenum pname, GLint64* data) {
-	return glad_glGetInteger64v(pname, data);
+	glad_glGetInteger64v(pname, data);
 }
 GLAPI void glGetSynciv(GLsync sync, GLenum pname, GLsizei count, GLsizei* length, GLint* values) {
-	return glad_glGetSynciv(sync, pname, count, length, values);
+	glad_glGetSynciv(sync, pname, count, length, values);
 }
 GLAPI void glGetInteger64i_v(GLenum target, GLuint index, GLint64* data) {
-	return glad_glGetInteger64i_v(target, index, data);
+	glad_glGetInteger64i_v(target, index, data);
 }
 GLAPI void glGetBufferParameteri64v(GLenum target, GLenum pname, GLint64* params) {
-	return glad_glGetBufferParameteri64v(target, pname, params);
+	glad_glGetBufferParameteri64v(target, pname, params);
 }
 GLAPI void glFramebufferTexture(GLenum target, GLenum attachment, GLuint texture, GLint level) {
-	return glad_glFramebufferTexture(target, attachment, texture, level);
+	glad_glFramebufferTexture(target, attachment, texture, level);
 }
 GLAPI void glTexImage2DMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations) {
-	return glad_glTexImage2DMultisample(target, samples, internalformat, width, height, fixedsamplelocations);
+	glad_glTexImage2DMultisample(target, samples, internalformat, width, height, fixedsamplelocations);
 }
 GLAPI void glTexImage3DMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations) {
-	return glad_glTexImage3DMultisample(target, samples, internalformat, width, height, depth, fixedsamplelocations);
+	glad_glTexImage3DMultisample(target, samples, internalformat, width, height, depth, fixedsamplelocations);
 }
 GLAPI void glGetMultisamplefv(GLenum pname, GLuint index, GLfloat* val) {
-	return glad_glGetMultisamplefv(pname, index, val);
+	glad_glGetMultisamplefv(pname, index, val);
 }
 GLAPI void glSampleMaski(GLuint maskNumber, GLbitfield mask) {
-	return glad_glSampleMaski(maskNumber, mask);
+	glad_glSampleMaski(maskNumber, mask);
 }
 
 GLAPI void glBindFragDataLocationIndexed(GLuint program, GLuint colorNumber, GLuint index, const GLchar* name) {
-	return glad_glBindFragDataLocationIndexed(program, colorNumber, index, name);
+	glad_glBindFragDataLocationIndexed(program, colorNumber, index, name);
 }
 GLAPI GLint glGetFragDataIndex(GLuint program, const GLchar* name) {
 	return glad_glGetFragDataIndex(program, name);
 }
 GLAPI void glGenSamplers(GLsizei count, GLuint* samplers) {
-	return glad_glGenSamplers(count, samplers);
+	glad_glGenSamplers(count, samplers);
 }
 GLAPI void glDeleteSamplers(GLsizei count, const GLuint* samplers) {
-	return glad_glDeleteSamplers(count, samplers);
+	glad_glDeleteSamplers(count, samplers);
 }
 GLAPI GLboolean glIsSampler(GLuint sampler) {
 	return glad_glIsSampler(sampler);
 }
 GLAPI void glBindSampler(GLuint unit, GLuint sampler) {
-	return glad_glBindSampler(unit, sampler);
+	glad_glBindSampler(unit, sampler);
 }
 GLAPI void glSamplerParameteri(GLuint sampler, GLenum pname, GLint param) {
-	return glad_glSamplerParameteri(sampler, pname, param);
+	glad_glSamplerParameteri(sampler, pname, param);
 }
 GLAPI void glSamplerParameteriv(GLuint sampler, GLenum pname, const GLint* param) {
-	return glad_glSamplerParameteriv(sampler, pname, param);
+	glad_glSamplerParameteriv(sampler, pname, param);
 }
 GLAPI void glSamplerParameterf(GLuint sampler, GLenum pname, GLfloat param) {
-	return glad_glSamplerParameterf(sampler, pname, param);
+	glad_glSamplerParameterf(sampler, pname, param);
 }
 GLAPI void glSamplerParameterfv(GLuint sampler, GLenum pname, const GLfloat* param) {
-	return glad_glSamplerParameterfv(sampler, pname, param);
+	glad_glSamplerParameterfv(sampler, pname, param);
 }
 GLAPI void glSamplerParameterIiv(GLuint sampler, GLenum pname, const GLint* param) {
-	return glad_glSamplerParameterIiv(sampler, pname, param);
+	glad_glSamplerParameterIiv(sampler, pname, param);
 }
 GLAPI void glSamplerParameterIuiv(GLuint sampler, GLenum pname, const GLuint* param) {
-	return glad_glSamplerParameterIuiv(sampler, pname, param);
+	glad_glSamplerParameterIuiv(sampler, pname, param);
 }
 GLAPI void glGetSamplerParameteriv(GLuint sampler, GLenum pname, GLint* params) {
-	return glad_glGetSamplerParameteriv(sampler, pname, params);
+	glad_glGetSamplerParameteriv(sampler, pname, params);
 }
 GLAPI void glGetSamplerParameterIiv(GLuint sampler, GLenum pname, GLint* params) {
-	return glad_glGetSamplerParameterIiv(sampler, pname, params);
+	glad_glGetSamplerParameterIiv(sampler, pname, params);
 }
 GLAPI void glGetSamplerParameterfv(GLuint sampler, GLenum pname, GLfloat* params) {
-	return glad_glGetSamplerParameterfv(sampler, pname, params);
+	glad_glGetSamplerParameterfv(sampler, pname, params);
 }
 GLAPI void glGetSamplerParameterIuiv(GLuint sampler, GLenum pname, GLuint* params) {
-	return glad_glGetSamplerParameterIuiv(sampler, pname, params);
+	glad_glGetSamplerParameterIuiv(sampler, pname, params);
 }
 GLAPI void glQueryCounter(GLuint id, GLenum target) {
-	return glad_glQueryCounter(id, target);
+	glad_glQueryCounter(id, target);
 }
 GLAPI void glGetQueryObjecti64v(GLuint id, GLenum pname, GLint64* params) {
-	return glad_glGetQueryObjecti64v(id, pname, params);
+	glad_glGetQueryObjecti64v(id, pname, params);
 }
 GLAPI void glGetQueryObjectui64v(GLuint id, GLenum pname, GLuint64* params) {
-	return glad_glGetQueryObjectui64v(id, pname, params);
+	glad_glGetQueryObjectui64v(id, pname, params);
 }
 GLAPI void glVertexAttribDivisor(GLuint index, GLuint divisor) {
-	return glad_glVertexAttribDivisor(index, divisor);
+	glad_glVertexAttribDivisor(index, divisor);
 }
 GLAPI void glVertexAttribP1ui(GLuint index, GLenum type, GLboolean normalized, GLuint value) {
-	return glad_glVertexAttribP1ui(index, type, normalized, value);
+	glad_glVertexAttribP1ui(index, type, normalized, value);
 }
 GLAPI void glVertexAttribP1uiv(GLuint index, GLenum type, GLboolean normalized, const GLuint* value) {
-	return glad_glVertexAttribP1uiv(index, type, normalized, value);
+	glad_glVertexAttribP1uiv(index, type, normalized, value);
 }
 GLAPI void glVertexAttribP2ui(GLuint index, GLenum type, GLboolean normalized, GLuint value) {
-	return glad_glVertexAttribP2ui(index, type, normalized, value);
+	glad_glVertexAttribP2ui(index, type, normalized, value);
 }
 GLAPI void glVertexAttribP2uiv(GLuint index, GLenum type, GLboolean normalized, const GLuint* value) {
-	return glad_glVertexAttribP2uiv(index, type, normalized, value);
+	glad_glVertexAttribP2uiv(index, type, normalized, value);
 }
 GLAPI void glVertexAttribP3ui(GLuint index, GLenum type, GLboolean normalized, GLuint value) {
-	return glad_glVertexAttribP3ui(index, type, normalized, value);
+	glad_glVertexAttribP3ui(index, type, normalized, value);
 }
 GLAPI void glVertexAttribP3uiv(GLuint index, GLenum type, GLboolean normalized, const GLuint* value) {
-	return glad_glVertexAttribP3uiv(index, type, normalized, value);
+	glad_glVertexAttribP3uiv(index, type, normalized, value);
 }
 GLAPI void glVertexAttribP4ui(GLuint index, GLenum type, GLboolean normalized, GLuint value) {
-	return glad_glVertexAttribP4ui(index, type, normalized, value);
+	glad_glVertexAttribP4ui(index, type, normalized, value);
 }
 GLAPI void glVertexAttribP4uiv(GLuint index, GLenum type, GLboolean normalized, const GLuint* value) {
-	return glad_glVertexAttribP4uiv(index, type, normalized, value);
+	glad_glVertexAttribP4uiv(index, type, normalized, value);
 }
 GLAPI void glVertexP2ui(GLenum type, GLuint value) {
-	return glad_glVertexP2ui(type, value);
+	glad_glVertexP2ui(type, value);
 }
 GLAPI void glVertexP2uiv(GLenum type, const GLuint* value) {
-	return glad_glVertexP2uiv(type, value);
+	glad_glVertexP2uiv(type, value);
 }
 GLAPI void glVertexP3ui(GLenum type, GLuint value) {
-	return glad_glVertexP3ui(type, value);
+	glad_glVertexP3ui(type, value);
 }
 GLAPI void glVertexP3uiv(GLenum type, const GLuint* value) {
-	return glad_glVertexP3uiv(type, value);
+	glad_glVertexP3uiv(type, value);
 }
 GLAPI void glVertexP4ui(GLenum type, GLuint value) {
-	return glad_glVertexP4ui(type, value);
+	glad_glVertexP4ui(type, value);
 }
 GLAPI void glVertexP4uiv(GLenum type, const GLuint* value) {
-	return glad_glVertexP4uiv(type, value);
+	glad_glVertexP4uiv(type, value);
 }
 GLAPI void glTexCoordP1ui(GLenum type, GLuint coords) {
-	return glad_glTexCoordP1ui(type, coords);
+	glad_glTexCoordP1ui(type, coords);
 }
 GLAPI void glTexCoordP1uiv(GLenum type, const GLuint* coords) {
-	return glad_glTexCoordP1uiv(type, coords);
+	glad_glTexCoordP1uiv(type, coords);
 }
 GLAPI void glTexCoordP2ui(GLenum type, GLuint coords) {
-	return glad_glTexCoordP2ui(type, coords);
+	glad_glTexCoordP2ui(type, coords);
 }
 GLAPI void glTexCoordP2uiv(GLenum type, const GLuint* coords) {
-	return glad_glTexCoordP2uiv(type, coords);
+	glad_glTexCoordP2uiv(type, coords);
 }
 GLAPI void glTexCoordP3ui(GLenum type, GLuint coords) {
-	return glad_glTexCoordP3ui(type, coords);
+	glad_glTexCoordP3ui(type, coords);
 }
 GLAPI void glTexCoordP3uiv(GLenum type, const GLuint* coords) {
-	return glad_glTexCoordP3uiv(type, coords);
+	glad_glTexCoordP3uiv(type, coords);
 }
 GLAPI void glTexCoordP4ui(GLenum type, GLuint coords) {
-	return glad_glTexCoordP4ui(type, coords);
+	glad_glTexCoordP4ui(type, coords);
 }
 GLAPI void glTexCoordP4uiv(GLenum type, const GLuint* coords) {
-	return glad_glTexCoordP4uiv(type, coords);
+	glad_glTexCoordP4uiv(type, coords);
 }
 GLAPI void glMultiTexCoordP1ui(GLenum texture, GLenum type, GLuint coords) {
-	return glad_glMultiTexCoordP1ui(texture, type, coords);
+	glad_glMultiTexCoordP1ui(texture, type, coords);
 }
 GLAPI void glMultiTexCoordP1uiv(GLenum texture, GLenum type, const GLuint* coords) {
-	return glad_glMultiTexCoordP1uiv(texture, type, coords);
+	glad_glMultiTexCoordP1uiv(texture, type, coords);
 }
 GLAPI void glMultiTexCoordP2ui(GLenum texture, GLenum type, GLuint coords) {
-	return glad_glMultiTexCoordP2ui(texture, type, coords);
+	glad_glMultiTexCoordP2ui(texture, type, coords);
 }
 GLAPI void glMultiTexCoordP2uiv(GLenum texture, GLenum type, const GLuint* coords) {
-	return glad_glMultiTexCoordP2uiv(texture, type, coords);
+	glad_glMultiTexCoordP2uiv(texture, type, coords);
 }
 GLAPI void glMultiTexCoordP3ui(GLenum texture, GLenum type, GLuint coords) {
-	return glad_glMultiTexCoordP3ui(texture, type, coords);
+	glad_glMultiTexCoordP3ui(texture, type, coords);
 }
 GLAPI void glMultiTexCoordP3uiv(GLenum texture, GLenum type, const GLuint* coords) {
-	return glad_glMultiTexCoordP3uiv(texture, type, coords);
+	glad_glMultiTexCoordP3uiv(texture, type, coords);
 }
 GLAPI void glMultiTexCoordP4ui(GLenum texture, GLenum type, GLuint coords) {
-	return glad_glMultiTexCoordP4ui(texture, type, coords);
+	glad_glMultiTexCoordP4ui(texture, type, coords);
 }
 GLAPI void glMultiTexCoordP4uiv(GLenum texture, GLenum type, const GLuint* coords) {
-	return glad_glMultiTexCoordP4uiv(texture, type, coords);
+	glad_glMultiTexCoordP4uiv(texture, type, coords);
 }
 GLAPI void glNormalP3ui(GLenum type, GLuint coords) {
-	return glad_glNormalP3ui(type, coords);
+	glad_glNormalP3ui(type, coords);
 }
 GLAPI void glNormalP3uiv(GLenum type, const GLuint* coords) {
-	return glad_glNormalP3uiv(type, coords);
+	glad_glNormalP3uiv(type, coords);
 }
 GLAPI void glColorP3ui(GLenum type, GLuint color) {
-	return glad_glColorP3ui(type, color);
+	glad_glColorP3ui(type, color);
 }
 GLAPI void glColorP3uiv(GLenum type, const GLuint* color) {
-	return glad_glColorP3uiv(type, color);
+	glad_glColorP3uiv(type, color);
 }
 GLAPI void glColorP4ui(GLenum type, GLuint color) {
-	return glad_glColorP4ui(type, color);
+	glad_glColorP4ui(type, color);
 }
 GLAPI void glColorP4uiv(GLenum type, const GLuint* color) {
-	return glad_glColorP4uiv(type, color);
+	glad_glColorP4uiv(type, color);
 }
 GLAPI void glSecondaryColorP3ui(GLenum type, GLuint color) {
-	return glad_glSecondaryColorP3ui(type, color);
+	glad_glSecondaryColorP3ui(type, color);
 }
 GLAPI void glSecondaryColorP3uiv(GLenum type, const GLuint* color) {
-	return glad_glSecondaryColorP3uiv(type, color);
+	glad_glSecondaryColorP3uiv(type, color);
 }
 #endif
