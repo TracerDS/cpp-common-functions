@@ -22,6 +22,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <assert.h>
 #include <glad/glad.h>
 
 static void* get_proc(const char *namez);
@@ -1139,1140 +1140,1515 @@ int gladLoadGLLoader(GLADloadproc load) {
 	return GLVersion.major != 0 || GLVersion.minor != 0;
 }
 
+
 #ifndef __GL_FUNCTION_MACROS__
 GLAPI void glCullFace(GLenum mode) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glCullFace(mode);
 }
 GLAPI void glFrontFace(GLenum mode) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glFrontFace(mode);
 }
 GLAPI void glHint(GLenum target, GLenum mode) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glHint(target, mode);
 }
 GLAPI void glLineWidth(GLfloat width) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glLineWidth(width);
 }
 GLAPI void glPointSize(GLfloat size) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glPointSize(size);
 }
 GLAPI void glPolygonMode(GLenum face, GLenum mode) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glPolygonMode(face, mode);
 }
 GLAPI void glScissor(GLint x, GLint y, GLsizei width, GLsizei height) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glScissor(x, y, width, height);
 }
 GLAPI void glTexParameterf(GLenum target, GLenum pname, GLfloat param) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexParameterf(target, pname, param);
 }
 GLAPI void glTexParameterfv(GLenum target, GLenum pname, const GLfloat* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexParameterfv(target, pname, params);
 }
 GLAPI void glTexParameteri(GLenum target, GLenum pname, GLint param) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexParameteri(target, pname, param);
 }
 GLAPI void glTexParameteriv(GLenum target, GLenum pname, const GLint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexParameteriv(target, pname, params);
 }
 GLAPI void glTexImage1D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLint border, GLenum format, GLenum type, const void* pixels) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexImage1D(target, level, internalformat, width, border, format, type, pixels);
 }
 GLAPI void glTexImage2D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, const void* pixels) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexImage2D(target, level, internalformat, width, height, border, format, type, pixels);
 }
 GLAPI void glDrawBuffer(GLenum buf) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDrawBuffer(buf);
 }
 GLAPI void glClear(GLbitfield mask) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glClear(mask);
 }
 GLAPI void glClearColor(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glClearColor(red, green, blue, alpha);
 }
 GLAPI void glClearStencil(GLint s) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glClearStencil(s);
 }
 GLAPI void glClearDepth(GLdouble depth) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glClearDepth(depth);
 }
 GLAPI void glStencilMask(GLuint mask) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glStencilMask(mask);
 }
 GLAPI void glColorMask(GLboolean red, GLboolean green, GLboolean blue, GLboolean alpha) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glColorMask(red, green, blue, alpha);
 }
 GLAPI void glDepthMask(GLboolean flag) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDepthMask(flag);
 }
 GLAPI void glDisable(GLenum cap) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDisable(cap);
 }
 GLAPI void glEnable(GLenum cap) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glEnable(cap);
 }
 GLAPI void glFinish() {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glFinish();
 }
 GLAPI void glFlush() {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glFlush();
 }
 GLAPI void glBlendFunc(GLenum sfactor, GLenum dfactor) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBlendFunc(sfactor, dfactor);
 }
 GLAPI void glLogicOp(GLenum opcode) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glLogicOp(opcode);
 }
 GLAPI void glStencilFunc(GLenum func, GLint ref, GLuint mask) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glStencilFunc(func, ref, mask);
 }
 GLAPI void glStencilOp(GLenum fail, GLenum zfail, GLenum zpass) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glStencilOp(fail, zfail, zpass);
 }
 GLAPI void glDepthFunc(GLenum func) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDepthFunc(func);
 }
 GLAPI void glPixelStoref(GLenum pname, GLfloat param) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glPixelStoref(pname, param);
 }
 GLAPI void glPixelStorei(GLenum pname, GLint param) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glPixelStorei(pname, param);
 }
 GLAPI void glReadBuffer(GLenum src) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glReadBuffer(src);
 }
 GLAPI void glReadPixels(GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, void* pixels) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glReadPixels(x, y, width, height, format, type, pixels);
 }
 GLAPI void glGetBooleanv(GLenum pname, GLboolean* data) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetBooleanv(pname, data);
 }
 GLAPI void glGetDoublev(GLenum pname, GLdouble* data) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetDoublev(pname, data);
 }
 GLAPI GLenum glGetError() {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glGetError();
 }
 GLAPI void glGetFloatv(GLenum pname, GLfloat* data) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetFloatv(pname, data);
 }
 GLAPI void glGetIntegerv(GLenum pname, GLint* data) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetIntegerv(pname, data);
 }
 GLAPI const GLubyte* glGetString(GLenum name) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glGetString(name);
 }
 GLAPI void glGetTexImage(GLenum target, GLint level, GLenum format, GLenum type, void* pixels) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetTexImage(target, level, format, type, pixels);
 }
 GLAPI void glGetTexParameterfv(GLenum target, GLenum pname, GLfloat* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetTexParameterfv(target, pname, params);
 }
 GLAPI void glGetTexParameteriv(GLenum target, GLenum pname, GLint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetTexParameteriv(target, pname, params);
 }
 GLAPI void glGetTexLevelParameterfv(GLenum target, GLint level, GLenum pname, GLfloat* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetTexLevelParameterfv(target, level, pname, params);
 }
 GLAPI void glGetTexLevelParameteriv(GLenum target, GLint level, GLenum pname, GLint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetTexLevelParameteriv(target, level, pname, params);
 }
 GLAPI GLboolean glIsEnabled(GLenum cap) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glIsEnabled(cap);
 }
 GLAPI void glDepthRange(GLdouble n, GLdouble f) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDepthRange(n, f);
 }
 GLAPI void glViewport(GLint x, GLint y, GLsizei width, GLsizei height) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glViewport(x, y, width, height);
 }
 
 GLAPI void glDrawArrays(GLenum mode, GLint first, GLsizei count) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDrawArrays(mode, first, count);
 }
 GLAPI void glDrawElements(GLenum mode, GLsizei count, GLenum type, const void* indices) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDrawElements(mode, count, type, indices);
 }
 GLAPI void glPolygonOffset(GLfloat factor, GLfloat units) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glPolygonOffset(factor, units);
 }
 GLAPI void glCopyTexImage1D(GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glCopyTexImage1D(target, level, internalformat, x, y, width, border);
 }
 GLAPI void glCopyTexImage2D(GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glCopyTexImage2D(target, level, internalformat, x, y, width, height, border);
 }
 GLAPI void glCopyTexSubImage1D(GLenum target, GLint level, GLint xoffset, GLint x, GLint y, GLsizei width) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glCopyTexSubImage1D(target, level, xoffset, x, y, width);
 }
 GLAPI void glCopyTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glCopyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height);
 }
 GLAPI void glTexSubImage1D(GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, const void* pixels) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexSubImage1D(target, level, xoffset, width, format, type, pixels);
 }
 GLAPI void glTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const void* pixels) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels);
 }
 GLAPI void glBindTexture(GLenum target, GLuint texture) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBindTexture(target, texture);
 }
 GLAPI void glDeleteTextures(GLsizei n, const GLuint* textures) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDeleteTextures(n, textures);
 }
 GLAPI void glGenTextures(GLsizei n, GLuint* textures) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGenTextures(n, textures);
 }
 GLAPI GLboolean glIsTexture(GLuint texture) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glIsTexture(texture);
 }
 
 GLAPI void glDrawRangeElements(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const void* indices) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDrawRangeElements(mode, start, end, count, type, indices);
 }
 GLAPI void glTexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const void* pixels) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexImage3D(target, level, internalformat, width, height, depth, border, format, type, pixels);
 }
 GLAPI void glTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const void* pixels) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels);
 }
 GLAPI void glCopyTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glCopyTexSubImage3D(target, level, xoffset, yoffset, zoffset, x, y, width, height);
 }
 
 
 GLAPI void glActiveTexture(GLenum texture) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glActiveTexture(texture);
 }
 GLAPI void glSampleCoverage(GLfloat value, GLboolean invert) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glSampleCoverage(value, invert);
 }
 GLAPI void glCompressedTexImage3D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLsizei imageSize, const void* data) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glCompressedTexImage3D(target, level, internalformat, width, height, depth, border, imageSize, data);
 }
 GLAPI void glCompressedTexImage2D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const void* data) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glCompressedTexImage2D(target, level, internalformat, width, height, border, imageSize, data);
 }
 GLAPI void glCompressedTexImage1D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const void* data) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glCompressedTexImage1D(target, level, internalformat, width, border, imageSize, data);
 }
 GLAPI void glCompressedTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const void* data) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glCompressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, data);
 }
 GLAPI void glCompressedTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const void* data) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glCompressedTexSubImage2D(target, level, xoffset, yoffset, width, height, format, imageSize, data);
 }
 GLAPI void glCompressedTexSubImage1D(GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLsizei imageSize, const void* data) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glCompressedTexSubImage1D(target, level, xoffset, width, format, imageSize, data);
 }
 GLAPI void glGetCompressedTexImage(GLenum target, GLint level, void* img) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetCompressedTexImage(target, level, img);
 }
 
 
 GLAPI void glBlendFuncSeparate(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBlendFuncSeparate(sfactorRGB, dfactorRGB, sfactorAlpha, dfactorAlpha);
 }
 GLAPI void glMultiDrawArrays(GLenum mode, const GLint* first, const GLsizei* count, GLsizei drawcount) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glMultiDrawArrays(mode, first, count, drawcount);
 }
 GLAPI void glMultiDrawElements(GLenum mode, const GLsizei* count, GLenum type, const void* const* indices, GLsizei drawcount) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glMultiDrawElements(mode, count, type, indices, drawcount);
 }
 GLAPI void glPointParameterf(GLenum pname, GLfloat param) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glPointParameterf(pname, param);
 }
 GLAPI void glPointParameterfv(GLenum pname, const GLfloat* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glPointParameterfv(pname, params);
 }
 GLAPI void glPointParameteri(GLenum pname, GLint param) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glPointParameteri(pname, param);
 }
 GLAPI void glPointParameteriv(GLenum pname, const GLint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glPointParameteriv(pname, params);
 }
 GLAPI void glBlendColor(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBlendColor(red, green, blue, alpha);
 }
 GLAPI void glBlendEquation(GLenum mode) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBlendEquation(mode);
 }
 
 GLAPI void glGenQueries(GLsizei n, GLuint* ids) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGenQueries(n, ids);
 }
 GLAPI void glDeleteQueries(GLsizei n, const GLuint* ids) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDeleteQueries(n, ids);
 }
 GLAPI GLboolean glIsQuery(GLuint id) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glIsQuery(id);
 }
 GLAPI void glBeginQuery(GLenum target, GLuint id) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBeginQuery(target, id);
 }
 GLAPI void glEndQuery(GLenum target) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glEndQuery(target);
 }
 GLAPI void glGetQueryiv(GLenum target, GLenum pname, GLint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetQueryiv(target, pname, params);
 }
 GLAPI void glGetQueryObjectiv(GLuint id, GLenum pname, GLint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetQueryObjectiv(id, pname, params);
 }
 GLAPI void glGetQueryObjectuiv(GLuint id, GLenum pname, GLuint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetQueryObjectuiv(id, pname, params);
 }
 GLAPI void glBindBuffer(GLenum target, GLuint buffer) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBindBuffer(target, buffer);
 }
 GLAPI void glDeleteBuffers(GLsizei n, const GLuint* buffers) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDeleteBuffers(n, buffers);
 }
 GLAPI void glGenBuffers(GLsizei n, GLuint* buffers) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGenBuffers(n, buffers);
 }
 GLAPI GLboolean glIsBuffer(GLuint buffer) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glIsBuffer(buffer);
 }
 GLAPI void glBufferData(GLenum target, GLsizeiptr size, const void* data, GLenum usage) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBufferData(target, size, data, usage);
 }
 GLAPI void glBufferSubData(GLenum target, GLintptr offset, GLsizeiptr size, const void* data) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBufferSubData(target, offset, size, data);
 }
 GLAPI void glGetBufferSubData(GLenum target, GLintptr offset, GLsizeiptr size, void* data) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetBufferSubData(target, offset, size, data);
 }
 GLAPI void* glMapBuffer(GLenum target, GLenum access) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glMapBuffer(target, access);
 }
 GLAPI GLboolean glUnmapBuffer(GLenum target) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glUnmapBuffer(target);
 }
 GLAPI void glGetBufferParameteriv(GLenum target, GLenum pname, GLint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetBufferParameteriv(target, pname, params);
 }
 GLAPI void glGetBufferPointerv(GLenum target, GLenum pname, void** params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetBufferPointerv(target, pname, params);
 }
 
 GLAPI void glBlendEquationSeparate(GLenum modeRGB, GLenum modeAlpha) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBlendEquationSeparate(modeRGB, modeAlpha);
 }
 GLAPI void glDrawBuffers(GLsizei n, const GLenum* bufs) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDrawBuffers(n, bufs);
 }
 GLAPI void glStencilOpSeparate(GLenum face, GLenum sfail, GLenum dpfail, GLenum dppass) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glStencilOpSeparate(face, sfail, dpfail, dppass);
 }
 GLAPI void glStencilFuncSeparate(GLenum face, GLenum func, GLint ref, GLuint mask) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glStencilFuncSeparate(face, func, ref, mask);
 }
 GLAPI void glStencilMaskSeparate(GLenum face, GLuint mask) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glStencilMaskSeparate(face, mask);
 }
 GLAPI void glAttachShader(GLuint program, GLuint shader) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glAttachShader(program, shader);
 }
 GLAPI void glBindAttribLocation(GLuint program, GLuint index, const GLchar* name) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBindAttribLocation(program, index, name);
 }
 GLAPI void glCompileShader(GLuint shader) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glCompileShader(shader);
 }
 GLAPI GLuint glCreateProgram() {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glCreateProgram();
 }
 GLAPI GLuint glCreateShader(GLenum type) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glCreateShader(type);
 }
 GLAPI void glDeleteProgram(GLuint program) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDeleteProgram(program);
 }
 GLAPI void glDeleteShader(GLuint shader) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDeleteShader(shader);
 }
 GLAPI void glDetachShader(GLuint program, GLuint shader) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDetachShader(program, shader);
 }
 GLAPI void glDisableVertexAttribArray(GLuint index) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDisableVertexAttribArray(index);
 }
 GLAPI void glEnableVertexAttribArray(GLuint index) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glEnableVertexAttribArray(index);
 }
 GLAPI void glGetActiveAttrib(GLuint program, GLuint index, GLsizei bufSize, GLsizei* length, GLint* size, GLenum* type, GLchar* name) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetActiveAttrib(program, index, bufSize, length, size, type, name);
 }
 GLAPI void glGetActiveUniform(GLuint program, GLuint index, GLsizei bufSize, GLsizei* length, GLint* size, GLenum* type, GLchar* name) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetActiveUniform(program, index, bufSize, length, size, type, name);;
 }
 GLAPI void glGetAttachedShaders(GLuint program, GLsizei maxCount, GLsizei* count, GLuint* shaders) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetAttachedShaders(program, maxCount, count, shaders);
 }
 GLAPI GLint glGetAttribLocation(GLuint program, const GLchar* name) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glGetAttribLocation(program, name);
 }
 GLAPI void glGetProgramiv(GLuint program, GLenum pname, GLint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetProgramiv(program, pname, params);
 }
 GLAPI void glGetProgramInfoLog(GLuint program, GLsizei bufSize, GLsizei* length, GLchar* infoLog) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetProgramInfoLog(program, bufSize, length, infoLog);
 }
 GLAPI void glGetShaderiv(GLuint shader, GLenum pname, GLint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetShaderiv(shader, pname, params);
 }
 GLAPI void glGetShaderInfoLog(GLuint shader, GLsizei bufSize, GLsizei* length, GLchar* infoLog) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetShaderInfoLog(shader, bufSize, length, infoLog);
 }
 GLAPI void glGetShaderSource(GLuint shader, GLsizei bufSize, GLsizei* length, GLchar* source) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetShaderSource(shader, bufSize, length, source);
 }
 GLAPI GLint glGetUniformLocation(GLuint program, const GLchar* name) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glGetUniformLocation(program, name);
 }
 GLAPI void glGetUniformfv(GLuint program, GLint location, GLfloat* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetUniformfv(program, location, params);
 }
 GLAPI void glGetUniformiv(GLuint program, GLint location, GLint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetUniformiv(program, location, params);
 }
 GLAPI void glGetVertexAttribdv(GLuint index, GLenum pname, GLdouble* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetVertexAttribdv(index, pname, params);
 }
 GLAPI void glGetVertexAttribfv(GLuint index, GLenum pname, GLfloat* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetVertexAttribfv(index, pname, params);
 }
 GLAPI void glGetVertexAttribiv(GLuint index, GLenum pname, GLint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetVertexAttribiv(index, pname, params);
 }
 GLAPI void glGetVertexAttribPointerv(GLuint index, GLenum pname, void** pointer) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetVertexAttribPointerv(index, pname, pointer);
 }
 GLAPI GLboolean glIsProgram(GLuint program) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glIsProgram(program);
 }
 GLAPI GLboolean glIsShader(GLuint shader) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glIsShader(shader);
 }
 GLAPI void glLinkProgram(GLuint program) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glLinkProgram(program);
 }
 GLAPI void glShaderSource(GLuint shader, GLsizei count, const GLchar* const* string, const GLint* length) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glShaderSource(shader, count, string, length);
 }
 GLAPI void glUseProgram(GLuint program) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUseProgram(program);
 }
 GLAPI void glUniform1f(GLint location, GLfloat v0) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform1f(location, v0);
 }
 GLAPI void glUniform2f(GLint location, GLfloat v0, GLfloat v1) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform2f(location, v0, v1);
 }
 GLAPI void glUniform3f(GLint location, GLfloat v0, GLfloat v1, GLfloat v2) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform3f(location, v0, v1, v2);
 }
 GLAPI void glUniform4f(GLint location, GLfloat v0, GLfloat v1, GLfloat v2, GLfloat v3) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform4f(location, v0, v1, v2, v3);
 }
 GLAPI void glUniform1i(GLint location, GLint v0) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform1i(location, v0);
 }
 GLAPI void glUniform2i(GLint location, GLint v0, GLint v1) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform2i(location, v0, v1);
 }
 GLAPI void glUniform3i(GLint location, GLint v0, GLint v1, GLint v2) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform3i(location, v0, v1, v2);
 }
 GLAPI void glUniform4i(GLint location, GLint v0, GLint v1, GLint v2, GLint v3) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform4i(location, v0, v1, v2, v3);
 }
 GLAPI void glUniform1fv(GLint location, GLsizei count, const GLfloat* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform1fv(location, count, value);
 }
 GLAPI void glUniform2fv(GLint location, GLsizei count, const GLfloat* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform2fv(location, count, value);
 }
 GLAPI void glUniform3fv(GLint location, GLsizei count, const GLfloat* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform3fv(location, count, value);
 }
 GLAPI void glUniform4fv(GLint location, GLsizei count, const GLfloat* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform4fv(location, count, value);
 }
 GLAPI void glUniform1iv(GLint location, GLsizei count, const GLint* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform1iv(location, count, value);
 }
 GLAPI void glUniform2iv(GLint location, GLsizei count, const GLint* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform2iv(location, count, value);
 }
 GLAPI void glUniform3iv(GLint location, GLsizei count, const GLint* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform3iv(location, count, value);
 }
 GLAPI void glUniform4iv(GLint location, GLsizei count, const GLint* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform4iv(location, count, value);
 }
 GLAPI void glUniformMatrix2fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniformMatrix2fv(location, count, transpose, value);
 }
 GLAPI void glUniformMatrix3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniformMatrix3fv(location, count, transpose, value);
 }
 GLAPI void glUniformMatrix4fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniformMatrix4fv(location, count, transpose, value);
 }
 GLAPI void glValidateProgram(GLuint program) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glValidateProgram(program);
 }
 GLAPI void glVertexAttrib1d(GLuint index, GLdouble x) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib1d(index, x);
 }
 GLAPI void glVertexAttrib1dv(GLuint index, const GLdouble* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib1dv(index, v);
 }
 GLAPI void glVertexAttrib1f(GLuint index, GLfloat x) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib1f(index, x);
 }
 GLAPI void glVertexAttrib1fv(GLuint index, const GLfloat* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib1fv(index, v);
 }
 GLAPI void glVertexAttrib1s(GLuint index, GLshort x) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib1s(index, x);
 }
 GLAPI void glVertexAttrib1sv(GLuint index, const GLshort* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib1sv(index, v);
 }
 GLAPI void glVertexAttrib2d(GLuint index, GLdouble x, GLdouble y) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib2d(index, x, y);
 }
 GLAPI void glVertexAttrib2dv(GLuint index, const GLdouble* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib2dv(index, v);
 }
 GLAPI void glVertexAttrib2f(GLuint index, GLfloat x, GLfloat y) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib2f(index, x, y);
 }
 GLAPI void glVertexAttrib2fv(GLuint index, const GLfloat* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib2fv(index, v);
 }
 GLAPI void glVertexAttrib2s(GLuint index, GLshort x, GLshort y) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib2s(index, x, y);
 }
 GLAPI void glVertexAttrib2sv(GLuint index, const GLshort* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib2sv(index, v);
 }
 GLAPI void glVertexAttrib3d(GLuint index, GLdouble x, GLdouble y, GLdouble z) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib3d(index, x, y, z);
 }
 GLAPI void glVertexAttrib3dv(GLuint index, const GLdouble* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib3dv(index, v);
 }
 GLAPI void glVertexAttrib3f(GLuint index, GLfloat x, GLfloat y, GLfloat z) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib3f(index, x, y, z);
 }
 GLAPI void glVertexAttrib3fv(GLuint index, const GLfloat* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib3fv(index, v);
 }
 GLAPI void glVertexAttrib3s(GLuint index, GLshort x, GLshort y, GLshort z) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib3s(index, x, y, z);
 }
 GLAPI void glVertexAttrib3sv(GLuint index, const GLshort* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib3sv(index, v);
 }
 GLAPI void glVertexAttrib4Nbv(GLuint index, const GLbyte* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib4Nbv(index, v);
 }
 GLAPI void glVertexAttrib4Niv(GLuint index, const GLint* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib4Niv(index, v);
 }
 GLAPI void glVertexAttrib4Nsv(GLuint index, const GLshort* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib4Nsv(index, v);
 }
 GLAPI void glVertexAttrib4Nub(GLuint index, GLubyte x, GLubyte y, GLubyte z, GLubyte w) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib4Nub(index, x, y, z, w);
 }
 GLAPI void glVertexAttrib4Nubv(GLuint index, const GLubyte* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib4Nubv(index, v);
 }
 GLAPI void glVertexAttrib4Nuiv(GLuint index, const GLuint* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib4Nuiv(index, v);
 }
 GLAPI void glVertexAttrib4Nusv(GLuint index, const GLushort* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib4Nusv(index, v);
 }
 GLAPI void glVertexAttrib4bv(GLuint index, const GLbyte* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib4bv(index, v);
 }
 GLAPI void glVertexAttrib4d(GLuint index, GLdouble x, GLdouble y, GLdouble z, GLdouble w) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib4d(index, x, y, z, w);
 }
 GLAPI void glVertexAttrib4dv(GLuint index, const GLdouble* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib4dv(index, v);
 }
 GLAPI void glVertexAttrib4f(GLuint index, GLfloat x, GLfloat y, GLfloat z, GLfloat w) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib4f(index, x, y, z, w);
 }
 GLAPI void glVertexAttrib4fv(GLuint index, const GLfloat* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib4fv(index, v);
 }
 GLAPI void glVertexAttrib4iv(GLuint index, const GLint* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib4iv(index, v);
 }
 GLAPI void glVertexAttrib4s(GLuint index, GLshort x, GLshort y, GLshort z, GLshort w) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib4s(index, x, y, z, w);
 }
 GLAPI void glVertexAttrib4sv(GLuint index, const GLshort* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib4sv(index, v);
 }
 GLAPI void glVertexAttrib4ubv(GLuint index, const GLubyte* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib4ubv(index, v);
 }
 GLAPI void glVertexAttrib4uiv(GLuint index, const GLuint* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib4uiv(index, v);
 }
 GLAPI void glVertexAttrib4usv(GLuint index, const GLushort* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttrib4usv(index, v);
 }
 GLAPI void glVertexAttribPointer(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void* pointer) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribPointer(index, size, type, normalized, stride, pointer);
 }
 
 GLAPI void glUniformMatrix2x3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniformMatrix2x3fv(location, count, transpose, value);
 }
 GLAPI void glUniformMatrix3x2fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniformMatrix3x2fv(location, count, transpose, value);
 }
 GLAPI void glUniformMatrix2x4fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniformMatrix2x4fv(location, count, transpose, value);
 }
 GLAPI void glUniformMatrix4x2fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniformMatrix4x2fv(location, count, transpose, value);
 }
 GLAPI void glUniformMatrix3x4fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniformMatrix3x4fv(location, count, transpose, value);
 }
 GLAPI void glUniformMatrix4x3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniformMatrix4x3fv(location, count, transpose, value);
 }
 
 GLAPI void glColorMaski(GLuint index, GLboolean r, GLboolean g, GLboolean b, GLboolean a) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glColorMaski(index, r, g, b, a);
 }
 GLAPI void glGetBooleani_v(GLenum target, GLuint index, GLboolean* data) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetBooleani_v(target, index, data);
 }
 GLAPI void glGetIntegeri_v(GLenum target, GLuint index, GLint* data) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetIntegeri_v(target, index, data);
 }
 GLAPI void glEnablei(GLenum target, GLuint index) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glEnablei(target, index);
 }
 GLAPI void glDisablei(GLenum target, GLuint index) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDisablei(target, index);
 }
 GLAPI GLboolean glIsEnabledi(GLenum target, GLuint index) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glIsEnabledi(target, index);
 }
 GLAPI void glBeginTransformFeedback(GLenum primitiveMode) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBeginTransformFeedback(primitiveMode);
 }
 GLAPI void glEndTransformFeedback() {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glEndTransformFeedback();
 }
 GLAPI void glBindBufferRange(GLenum target, GLuint index, GLuint buffer, GLintptr offset, GLsizeiptr size) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBindBufferRange(target, index, buffer, offset, size);
 }
 GLAPI void glBindBufferBase(GLenum target, GLuint index, GLuint buffer) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBindBufferBase(target, index, buffer);
 }
 GLAPI void glTransformFeedbackVaryings(GLuint program, GLsizei count, const GLchar* const* varyings, GLenum bufferMode) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTransformFeedbackVaryings(program, count, varyings, bufferMode);
 }
 GLAPI void glGetTransformFeedbackVarying(GLuint program, GLuint index, GLsizei bufSize, GLsizei* length, GLsizei* size, GLenum* type, GLchar* name) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetTransformFeedbackVarying(program, index, bufSize, length, size, type, name);
 }
 GLAPI void glClampColor(GLenum target, GLenum clamp) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glClampColor(target, clamp);
 }
 GLAPI void glBeginConditionalRender(GLuint id, GLenum mode) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBeginConditionalRender(id, mode);
 }
 GLAPI void glEndConditionalRender() {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glEndConditionalRender();
 }
 GLAPI void glVertexAttribIPointer(GLuint index, GLint size, GLenum type, GLsizei stride, const void* pointer) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribIPointer(index, size, type, stride, pointer);
 }
 GLAPI void glGetVertexAttribIiv(GLuint index, GLenum pname, GLint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetVertexAttribIiv(index, pname, params);
 }
 GLAPI void glGetVertexAttribIuiv(GLuint index, GLenum pname, GLuint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetVertexAttribIuiv(index, pname, params);
 }
 GLAPI void glVertexAttribI1i(GLuint index, GLint x) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribI1i(index, x);
 }
 GLAPI void glVertexAttribI2i(GLuint index, GLint x, GLint y) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribI2i(index, x, y);
 }
 GLAPI void glVertexAttribI3i(GLuint index, GLint x, GLint y, GLint z) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribI3i(index, x, y, z);
 }
 GLAPI void glVertexAttribI4i(GLuint index, GLint x, GLint y, GLint z, GLint w) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribI4i(index, x, y, z, w);
 }
 GLAPI void glVertexAttribI1ui(GLuint index, GLuint x) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribI1ui(index, x);
 }
 GLAPI void glVertexAttribI2ui(GLuint index, GLuint x, GLuint y) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribI2ui(index, x, y);
 }
 GLAPI void glVertexAttribI3ui(GLuint index, GLuint x, GLuint y, GLuint z) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribI3ui(index, x, y, z);
 }
 GLAPI void glVertexAttribI4ui(GLuint index, GLuint x, GLuint y, GLuint z, GLuint w) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribI4ui(index, x, y, z, w);
 }
 GLAPI void glVertexAttribI1iv(GLuint index, const GLint* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribI1iv(index, v);
 }
 GLAPI void glVertexAttribI2iv(GLuint index, const GLint* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribI2iv(index, v);
 }
 GLAPI void glVertexAttribI3iv(GLuint index, const GLint* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribI3iv(index, v);
 }
 GLAPI void glVertexAttribI4iv(GLuint index, const GLint* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribI4iv(index, v);
 }
 GLAPI void glVertexAttribI1uiv(GLuint index, const GLuint* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribI1uiv(index, v);
 }
 GLAPI void glVertexAttribI2uiv(GLuint index, const GLuint* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribI2uiv(index, v);
 }
 GLAPI void glVertexAttribI3uiv(GLuint index, const GLuint* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribI3uiv(index, v);
 }
 GLAPI void glVertexAttribI4uiv(GLuint index, const GLuint* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribI4uiv(index, v);
 }
 GLAPI void glVertexAttribI4bv(GLuint index, const GLbyte* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribI4bv(index, v);
 }
 GLAPI void glVertexAttribI4sv(GLuint index, const GLshort* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribI4sv(index, v);
 }
 GLAPI void glVertexAttribI4ubv(GLuint index, const GLubyte* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribI4ubv(index, v);
 }
 GLAPI void glVertexAttribI4usv(GLuint index, const GLushort* v) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribI4usv(index, v);
 }
 GLAPI void glGetUniformuiv(GLuint program, GLint location, GLuint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetUniformuiv(program, location, params);
 }
 GLAPI void glBindFragDataLocation(GLuint program, GLuint color, const GLchar* name) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBindFragDataLocation(program, color, name);
 }
 GLAPI GLint glGetFragDataLocation(GLuint program, const GLchar* name) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glGetFragDataLocation(program, name);
 }
 GLAPI void glUniform1ui(GLint location, GLuint v0) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform1ui(location, v0);
 }
 GLAPI void glUniform2ui(GLint location, GLuint v0, GLuint v1) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform2ui(location, v0, v1);
 }
 GLAPI void glUniform3ui(GLint location, GLuint v0, GLuint v1, GLuint v2) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform3ui(location, v0, v1, v2);
 }
 GLAPI void glUniform4ui(GLint location, GLuint v0, GLuint v1, GLuint v2, GLuint v3) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform4ui(location, v0, v1, v2, v3);
 }
 GLAPI void glUniform1uiv(GLint location, GLsizei count, const GLuint* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform1uiv(location, count, value);
 }
 GLAPI void glUniform2uiv(GLint location, GLsizei count, const GLuint* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform2uiv(location, count, value);
 }
 GLAPI void glUniform3uiv(GLint location, GLsizei count, const GLuint* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform3uiv(location, count, value);
 }
 GLAPI void glUniform4uiv(GLint location, GLsizei count, const GLuint* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniform4uiv(location, count, value);
 }
 GLAPI void glTexParameterIiv(GLenum target, GLenum pname, const GLint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexParameterIiv(target, pname, params);
 }
 GLAPI void glTexParameterIuiv(GLenum target, GLenum pname, const GLuint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexParameterIuiv(target, pname, params);
 }
 GLAPI void glGetTexParameterIiv(GLenum target, GLenum pname, GLint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetTexParameterIiv(target, pname, params);
 }
 GLAPI void glGetTexParameterIuiv(GLenum target, GLenum pname, GLuint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetTexParameterIuiv(target, pname, params);
 }
 GLAPI void glClearBufferiv(GLenum buffer, GLint drawbuffer, const GLint* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glClearBufferiv(buffer, drawbuffer, value);
 }
 GLAPI void glClearBufferuiv(GLenum buffer, GLint drawbuffer, const GLuint* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glClearBufferuiv(buffer, drawbuffer, value);
 }
 GLAPI void glClearBufferfv(GLenum buffer, GLint drawbuffer, const GLfloat* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glClearBufferfv(buffer, drawbuffer, value);
 }
 GLAPI void glClearBufferfi(GLenum buffer, GLint drawbuffer, GLfloat depth, GLint stencil) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glClearBufferfi(buffer, drawbuffer, depth, stencil);
 }
 GLAPI const GLubyte* glGetStringi(GLenum name, GLuint index) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glGetStringi(name, index);
 }
 GLAPI GLboolean glIsRenderbuffer(GLuint renderbuffer) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glIsRenderbuffer(renderbuffer);
 }
 GLAPI void glBindRenderbuffer(GLenum target, GLuint renderbuffer) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBindRenderbuffer(target, renderbuffer);
 }
 GLAPI void glDeleteRenderbuffers(GLsizei n, const GLuint* renderbuffers) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDeleteRenderbuffers(n, renderbuffers);
 }
 GLAPI void glGenRenderbuffers(GLsizei n, GLuint* renderbuffers) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGenRenderbuffers(n, renderbuffers);
 }
 GLAPI void glRenderbufferStorage(GLenum target, GLenum internalformat, GLsizei width, GLsizei height) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glRenderbufferStorage(target, internalformat, width, height);
 }
 GLAPI void glGetRenderbufferParameteriv(GLenum target, GLenum pname, GLint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetRenderbufferParameteriv(target, pname, params);
 }
 GLAPI GLboolean glIsFramebuffer(GLuint framebuffer) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glIsFramebuffer(framebuffer);
 }
 GLAPI void glBindFramebuffer(GLenum target, GLuint framebuffer) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBindFramebuffer(target, framebuffer);
 }
 GLAPI void glDeleteFramebuffers(GLsizei n, const GLuint* framebuffers) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDeleteFramebuffers(n, framebuffers);
 }
 GLAPI void glGenFramebuffers(GLsizei n, GLuint* framebuffers) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGenFramebuffers(n, framebuffers);
 }
 GLAPI GLenum glCheckFramebufferStatus(GLenum target) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glCheckFramebufferStatus(target);
 }
 GLAPI void glFramebufferTexture1D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glFramebufferTexture1D(target, attachment, textarget, texture, level);
 }
 GLAPI void glFramebufferTexture2D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glFramebufferTexture2D(target, attachment, textarget, texture, level);
 }
 GLAPI void glFramebufferTexture3D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLint zoffset) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glFramebufferTexture3D(target, attachment, textarget, texture, level, zoffset);
 }
 GLAPI void glFramebufferRenderbuffer(GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glFramebufferRenderbuffer(target, attachment, renderbuffertarget, renderbuffer);
 }
 GLAPI void glGetFramebufferAttachmentParameteriv(GLenum target, GLenum attachment, GLenum pname, GLint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetFramebufferAttachmentParameteriv(target, attachment, pname, params);
 }
 GLAPI void glGenerateMipmap(GLenum target) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGenerateMipmap(target);
 }
 GLAPI void glBlitFramebuffer(GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBlitFramebuffer(srcX0, srcY0, srcX1, srcY1, dstX0, dstY0, dstX1, dstY1, mask, filter);
 }
 GLAPI void glRenderbufferStorageMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glRenderbufferStorageMultisample(target, samples, internalformat, width, height);
 }
 GLAPI void glFramebufferTextureLayer(GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glFramebufferTextureLayer(target, attachment, texture, level, layer);
 }
 GLAPI void* glMapBufferRange(GLenum target, GLintptr offset, GLsizeiptr length, GLbitfield access) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glMapBufferRange(target, offset, length, access);
 }
 GLAPI void glFlushMappedBufferRange(GLenum target, GLintptr offset, GLsizeiptr length) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glFlushMappedBufferRange(target, offset, length);
 }
 GLAPI void glBindVertexArray(GLuint array) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBindVertexArray(array);
 }
 GLAPI void glDeleteVertexArrays(GLsizei n, const GLuint* arrays) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDeleteVertexArrays(n, arrays);
 }
 GLAPI void glGenVertexArrays(GLsizei n, GLuint* arrays) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGenVertexArrays(n, arrays);
 }
 GLAPI GLboolean glIsVertexArray(GLuint array) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glIsVertexArray(array);
 }
 
 GLAPI void glDrawArraysInstanced(GLenum mode, GLint first, GLsizei count, GLsizei instancecount) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDrawArraysInstanced(mode, first, count, instancecount);
 }
 GLAPI void glDrawElementsInstanced(GLenum mode, GLsizei count, GLenum type, const void* indices, GLsizei instancecount) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDrawElementsInstanced(mode, count, type, indices, instancecount);
 }
 GLAPI void glTexBuffer(GLenum target, GLenum internalformat, GLuint buffer) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexBuffer(target, internalformat, buffer);
 }
 GLAPI void glPrimitiveRestartIndex(GLuint index) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glPrimitiveRestartIndex(index);
 }
 GLAPI void glCopyBufferSubData(GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glCopyBufferSubData(readTarget, writeTarget, readOffset, writeOffset, size);
 }
 GLAPI void glGetUniformIndices(GLuint program, GLsizei uniformCount, const GLchar* const* uniformNames, GLuint* uniformIndices) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetUniformIndices(program, uniformCount, uniformNames, uniformIndices);
 }
 GLAPI void glGetActiveUniformsiv(GLuint program, GLsizei uniformCount, const GLuint* uniformIndices, GLenum pname, GLint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetActiveUniformsiv(program, uniformCount, uniformIndices, pname, params);
 }
 GLAPI void glGetActiveUniformName(GLuint program, GLuint uniformIndex, GLsizei bufSize, GLsizei* length, GLchar* uniformName) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetActiveUniformName(program, uniformIndex, bufSize, length, uniformName);
 }
 GLAPI GLuint glGetUniformBlockIndex(GLuint program, const GLchar* uniformBlockName) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glGetUniformBlockIndex(program, uniformBlockName);
 }
 GLAPI void glGetActiveUniformBlockiv(GLuint program, GLuint uniformBlockIndex, GLenum pname, GLint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetActiveUniformBlockiv(program, uniformBlockIndex, pname, params);
 }
 GLAPI void glGetActiveUniformBlockName(GLuint program, GLuint uniformBlockIndex, GLsizei bufSize, GLsizei* length, GLchar* uniformBlockName) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetActiveUniformBlockName(program, uniformBlockIndex, bufSize, length, uniformBlockName);
 }
 GLAPI void glUniformBlockBinding(GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glUniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding);
 }
 
 GLAPI void glDrawElementsBaseVertex(GLenum mode, GLsizei count, GLenum type, const void* indices, GLint basevertex) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDrawElementsBaseVertex(mode, count, type, indices, basevertex);
 }
 GLAPI void glDrawRangeElementsBaseVertex(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const void* indices, GLint basevertex) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDrawRangeElementsBaseVertex(mode, start, end, count, type, indices, basevertex);
 }
 GLAPI void glDrawElementsInstancedBaseVertex(GLenum mode, GLsizei count, GLenum type, const void* indices, GLsizei instancecount, GLint basevertex) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDrawElementsInstancedBaseVertex(mode, count, type, indices, instancecount, basevertex);
 }
 GLAPI void glMultiDrawElementsBaseVertex(GLenum mode, const GLsizei* count, GLenum type, const void* const* indices, GLsizei drawcount, const GLint* basevertex) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glMultiDrawElementsBaseVertex(mode, count, type, indices, drawcount, basevertex);
 }
 GLAPI void glProvokingVertex(GLenum mode) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glProvokingVertex(mode);
 }
 GLAPI GLsync glFenceSync(GLenum condition, GLbitfield flags) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glFenceSync(condition, flags);
 }
 GLAPI GLboolean glIsSync(GLsync sync) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glIsSync(sync);
 }
 GLAPI void glDeleteSync(GLsync sync) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDeleteSync(sync);
 }
 GLAPI GLenum glClientWaitSync(GLsync sync, GLbitfield flags, GLuint64 timeout) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glClientWaitSync(sync, flags, timeout);
 }
 GLAPI void glWaitSync(GLsync sync, GLbitfield flags, GLuint64 timeout) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glWaitSync(sync, flags, timeout);
 }
 GLAPI void glGetInteger64v(GLenum pname, GLint64* data) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetInteger64v(pname, data);
 }
 GLAPI void glGetSynciv(GLsync sync, GLenum pname, GLsizei count, GLsizei* length, GLint* values) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetSynciv(sync, pname, count, length, values);
 }
 GLAPI void glGetInteger64i_v(GLenum target, GLuint index, GLint64* data) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetInteger64i_v(target, index, data);
 }
 GLAPI void glGetBufferParameteri64v(GLenum target, GLenum pname, GLint64* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetBufferParameteri64v(target, pname, params);
 }
 GLAPI void glFramebufferTexture(GLenum target, GLenum attachment, GLuint texture, GLint level) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glFramebufferTexture(target, attachment, texture, level);
 }
 GLAPI void glTexImage2DMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexImage2DMultisample(target, samples, internalformat, width, height, fixedsamplelocations);
 }
 GLAPI void glTexImage3DMultisample(GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexImage3DMultisample(target, samples, internalformat, width, height, depth, fixedsamplelocations);
 }
 GLAPI void glGetMultisamplefv(GLenum pname, GLuint index, GLfloat* val) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetMultisamplefv(pname, index, val);
 }
 GLAPI void glSampleMaski(GLuint maskNumber, GLbitfield mask) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glSampleMaski(maskNumber, mask);
 }
 
 GLAPI void glBindFragDataLocationIndexed(GLuint program, GLuint colorNumber, GLuint index, const GLchar* name) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBindFragDataLocationIndexed(program, colorNumber, index, name);
 }
 GLAPI GLint glGetFragDataIndex(GLuint program, const GLchar* name) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glGetFragDataIndex(program, name);
 }
 GLAPI void glGenSamplers(GLsizei count, GLuint* samplers) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGenSamplers(count, samplers);
 }
 GLAPI void glDeleteSamplers(GLsizei count, const GLuint* samplers) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glDeleteSamplers(count, samplers);
 }
 GLAPI GLboolean glIsSampler(GLuint sampler) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	return glad_glIsSampler(sampler);
 }
 GLAPI void glBindSampler(GLuint unit, GLuint sampler) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glBindSampler(unit, sampler);
 }
 GLAPI void glSamplerParameteri(GLuint sampler, GLenum pname, GLint param) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glSamplerParameteri(sampler, pname, param);
 }
 GLAPI void glSamplerParameteriv(GLuint sampler, GLenum pname, const GLint* param) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glSamplerParameteriv(sampler, pname, param);
 }
 GLAPI void glSamplerParameterf(GLuint sampler, GLenum pname, GLfloat param) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glSamplerParameterf(sampler, pname, param);
 }
 GLAPI void glSamplerParameterfv(GLuint sampler, GLenum pname, const GLfloat* param) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glSamplerParameterfv(sampler, pname, param);
 }
 GLAPI void glSamplerParameterIiv(GLuint sampler, GLenum pname, const GLint* param) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glSamplerParameterIiv(sampler, pname, param);
 }
 GLAPI void glSamplerParameterIuiv(GLuint sampler, GLenum pname, const GLuint* param) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glSamplerParameterIuiv(sampler, pname, param);
 }
 GLAPI void glGetSamplerParameteriv(GLuint sampler, GLenum pname, GLint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetSamplerParameteriv(sampler, pname, params);
 }
 GLAPI void glGetSamplerParameterIiv(GLuint sampler, GLenum pname, GLint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetSamplerParameterIiv(sampler, pname, params);
 }
 GLAPI void glGetSamplerParameterfv(GLuint sampler, GLenum pname, GLfloat* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetSamplerParameterfv(sampler, pname, params);
 }
 GLAPI void glGetSamplerParameterIuiv(GLuint sampler, GLenum pname, GLuint* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetSamplerParameterIuiv(sampler, pname, params);
 }
 GLAPI void glQueryCounter(GLuint id, GLenum target) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glQueryCounter(id, target);
 }
 GLAPI void glGetQueryObjecti64v(GLuint id, GLenum pname, GLint64* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetQueryObjecti64v(id, pname, params);
 }
 GLAPI void glGetQueryObjectui64v(GLuint id, GLenum pname, GLuint64* params) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glGetQueryObjectui64v(id, pname, params);
 }
 GLAPI void glVertexAttribDivisor(GLuint index, GLuint divisor) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribDivisor(index, divisor);
 }
 GLAPI void glVertexAttribP1ui(GLuint index, GLenum type, GLboolean normalized, GLuint value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribP1ui(index, type, normalized, value);
 }
 GLAPI void glVertexAttribP1uiv(GLuint index, GLenum type, GLboolean normalized, const GLuint* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribP1uiv(index, type, normalized, value);
 }
 GLAPI void glVertexAttribP2ui(GLuint index, GLenum type, GLboolean normalized, GLuint value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribP2ui(index, type, normalized, value);
 }
 GLAPI void glVertexAttribP2uiv(GLuint index, GLenum type, GLboolean normalized, const GLuint* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribP2uiv(index, type, normalized, value);
 }
 GLAPI void glVertexAttribP3ui(GLuint index, GLenum type, GLboolean normalized, GLuint value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribP3ui(index, type, normalized, value);
 }
 GLAPI void glVertexAttribP3uiv(GLuint index, GLenum type, GLboolean normalized, const GLuint* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribP3uiv(index, type, normalized, value);
 }
 GLAPI void glVertexAttribP4ui(GLuint index, GLenum type, GLboolean normalized, GLuint value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribP4ui(index, type, normalized, value);
 }
 GLAPI void glVertexAttribP4uiv(GLuint index, GLenum type, GLboolean normalized, const GLuint* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexAttribP4uiv(index, type, normalized, value);
 }
 GLAPI void glVertexP2ui(GLenum type, GLuint value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexP2ui(type, value);
 }
 GLAPI void glVertexP2uiv(GLenum type, const GLuint* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexP2uiv(type, value);
 }
 GLAPI void glVertexP3ui(GLenum type, GLuint value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexP3ui(type, value);
 }
 GLAPI void glVertexP3uiv(GLenum type, const GLuint* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexP3uiv(type, value);
 }
 GLAPI void glVertexP4ui(GLenum type, GLuint value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexP4ui(type, value);
 }
 GLAPI void glVertexP4uiv(GLenum type, const GLuint* value) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glVertexP4uiv(type, value);
 }
 GLAPI void glTexCoordP1ui(GLenum type, GLuint coords) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexCoordP1ui(type, coords);
 }
 GLAPI void glTexCoordP1uiv(GLenum type, const GLuint* coords) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexCoordP1uiv(type, coords);
 }
 GLAPI void glTexCoordP2ui(GLenum type, GLuint coords) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexCoordP2ui(type, coords);
 }
 GLAPI void glTexCoordP2uiv(GLenum type, const GLuint* coords) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexCoordP2uiv(type, coords);
 }
 GLAPI void glTexCoordP3ui(GLenum type, GLuint coords) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexCoordP3ui(type, coords);
 }
 GLAPI void glTexCoordP3uiv(GLenum type, const GLuint* coords) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexCoordP3uiv(type, coords);
 }
 GLAPI void glTexCoordP4ui(GLenum type, GLuint coords) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexCoordP4ui(type, coords);
 }
 GLAPI void glTexCoordP4uiv(GLenum type, const GLuint* coords) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glTexCoordP4uiv(type, coords);
 }
 GLAPI void glMultiTexCoordP1ui(GLenum texture, GLenum type, GLuint coords) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glMultiTexCoordP1ui(texture, type, coords);
 }
 GLAPI void glMultiTexCoordP1uiv(GLenum texture, GLenum type, const GLuint* coords) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glMultiTexCoordP1uiv(texture, type, coords);
 }
 GLAPI void glMultiTexCoordP2ui(GLenum texture, GLenum type, GLuint coords) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glMultiTexCoordP2ui(texture, type, coords);
 }
 GLAPI void glMultiTexCoordP2uiv(GLenum texture, GLenum type, const GLuint* coords) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glMultiTexCoordP2uiv(texture, type, coords);
 }
 GLAPI void glMultiTexCoordP3ui(GLenum texture, GLenum type, GLuint coords) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glMultiTexCoordP3ui(texture, type, coords);
 }
 GLAPI void glMultiTexCoordP3uiv(GLenum texture, GLenum type, const GLuint* coords) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glMultiTexCoordP3uiv(texture, type, coords);
 }
 GLAPI void glMultiTexCoordP4ui(GLenum texture, GLenum type, GLuint coords) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glMultiTexCoordP4ui(texture, type, coords);
 }
 GLAPI void glMultiTexCoordP4uiv(GLenum texture, GLenum type, const GLuint* coords) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glMultiTexCoordP4uiv(texture, type, coords);
 }
 GLAPI void glNormalP3ui(GLenum type, GLuint coords) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glNormalP3ui(type, coords);
 }
 GLAPI void glNormalP3uiv(GLenum type, const GLuint* coords) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glNormalP3uiv(type, coords);
 }
 GLAPI void glColorP3ui(GLenum type, GLuint color) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glColorP3ui(type, color);
 }
 GLAPI void glColorP3uiv(GLenum type, const GLuint* color) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glColorP3uiv(type, color);
 }
 GLAPI void glColorP4ui(GLenum type, GLuint color) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glColorP4ui(type, color);
 }
 GLAPI void glColorP4uiv(GLenum type, const GLuint* color) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glColorP4uiv(type, color);
 }
 GLAPI void glSecondaryColorP3ui(GLenum type, GLuint color) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glSecondaryColorP3ui(type, color);
 }
 GLAPI void glSecondaryColorP3uiv(GLenum type, const GLuint* color) {
+	assert(glad_glGetString && "GLAD not initialized!");
 	glad_glSecondaryColorP3uiv(type, color);
 }
 #endif
