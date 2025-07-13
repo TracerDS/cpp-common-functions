@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-namespace Common::UTF8  {
+namespace Common::UTF8 {
     constexpr std::wstring fromUTF8(const std::wstring& utf16) noexcept { return utf16; }
     std::wstring fromUTF8(const std::string& utf8String) noexcept {
         if (utf8String.empty())
